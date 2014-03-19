@@ -9,7 +9,7 @@ Structural modeling project -- code, document and data repository
 The SSO web application was started as part of the Basis Structural Modeling Project.
 The SMP further refines and develops the SSO web application as a stand-alone Javascript
 web application that is used to demonstrate this type of system structuring process.  The 
-strict subordination ordering allows only one objet at each leve.
+strict subordination ordering allows only one objet at each level.
 
 #### General Subordination Ordering -- GSO Web Application
 
