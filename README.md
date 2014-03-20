@@ -23,3 +23,10 @@ structural relationship.  The connected system objects are then analyzed and eva
 by clustering the objects around the matrix central diagonal.  This analytical technique
 produces subsystem views of the clustered system.  Multiple subsystem configuration may
 be produced for further evaluation and analysis.
+
+#### Lower Triangular Cluster - Uniform Weights -- LTCUW Web Application
+
+The LTCUW Web Application is similar to the CDCUW web application except the system 
+objects are clustered in the lower triangular area of the matrix.
+
+
