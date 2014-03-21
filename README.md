@@ -29,4 +29,20 @@ be produced for further evaluation and analysis.
 The LTCUW Web Application is similar to the CDCUW web application except the system 
 objects are clustered in the lower triangular area of the matrix.
 
+#### Upper Triangular Cluster - Uniform Weights -- UTCUW Web Application
 
+The UTCUW Web Application is similar to the CDCUW web application except the system 
+objects are clustered in the lower triangular area of the matrix.
+
+#### Project Objectives
+
+The six listed structural modeling components have been selected to support the general 
+objective of producing well-defined and well-documented abstract relation types.  Abstract
+relation types have been developed over a period of years.  The content and 
+characteristics of an abstract relation type are detailed in the Basic Structural Modeling
+Project which is listed as the https://github.com/jjs0sbw/bsmp GitHub repository.
+
+The natural language structural relationship is transformed into a mathematical relation 
+using process rules that are properly aligned with the system domain of interest.  These 
+six individual web applications are designed to clearly demonstrate these processes on 
+domain types and that contain systems with different semantics and structural forms.
