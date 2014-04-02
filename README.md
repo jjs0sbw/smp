@@ -44,5 +44,5 @@ Project which is listed as the https://github.com/jjs0sbw/bsmp GitHub repository
 
 The natural language structural relationship is transformed into a mathematical relation 
 using process rules that are properly aligned with the system domain of interest.  These 
-six individual web applications are designed to clearly demonstrate these processes on 
-domain types and that contain systems with different semantics and structural forms.
+five individual web applications are designed to clearly demonstrate these processes on 
+domains that contain systems with different semantics and structural forms.
