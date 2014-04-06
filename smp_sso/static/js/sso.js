@@ -1,12 +1,12 @@
 "use strict";
 /*
  * Copyright (c) 2013, 2014 Joseph J. Simpson
- * This file is part of the bsmp_wa_1 program, this program will have multiple versions.
- * This file in bsmp_wa_1 is free software: you can redistribute ist and/or modify
+ * This file is part of the Strict Subornation (SSO) web application (SSOWA).
+ * This file in SSOWA is free software: you can redistribute ist and/or modify
  * it under the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * The bsmp_wa_1 program is distributed in the hope that it will be useful, but WITHOUT
+ * The SSOWA program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
  * PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  * 
@@ -46,10 +46,10 @@
 			var canvas_2 = document.getElementById("SSO_3");
 			var context_2 = canvas_2.getContext("2d");
 			
-			gridText = BSMP.MatrixBin.O(19);
-			gridColor = BSMP.MatrixBin.O(19);
+			gridText = SSO.MatrixBin.O(19);
+			gridColor = SSO.MatrixBin.O(19);
 			
-			vNames = BSMP.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+			vNames = SSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
 			
 			initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);	
 			
@@ -340,7 +340,7 @@
 	
 	tempGridColor = gridColor.dup();
 	tempGridText = gridText.dup();
-	tempId = BSMP.MatrixBin.Id(19);
+	tempId = SSO.MatrixBin.Id(19);
 	rMatrix = tempGridText.add(tempId);
 	
 	reachabilityMatrix(rMatrix);
