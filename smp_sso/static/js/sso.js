@@ -60,7 +60,8 @@
             document.getElementById("northFalse").style.display="none";
             
             //write out gridText 
-            //writeToDocOne(gridText.view());		
+            //writeToDocOne(gridText.view());	
+             writeToDocOne(gridText.view());			
             
             function writeToDocOne(message) {
     		document.getElementById("test_out").innerHTML = message;
