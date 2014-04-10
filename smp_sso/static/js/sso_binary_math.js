@@ -18,7 +18,8 @@
 var SSO = {
   limit: 1e-5,
   notice: "Special binary matrix and vector type.",
-  reference: "Societal Systems: Planning, Policy, and Complexity, 1976 - J. Warfield."
+  reference: "Societal Systems: Planning, Policy, and Complexity, 1976 - J. Warfield.",
+  author: "Joseph James Simpson"
 }; 
 
 SSO.VecBin = function() {};
@@ -32,16 +33,16 @@ var $Vb = SSO.VecBin.new_one;
  
 SSO.VecBin.O = function(n) {
   var ele = [];
-  for(i=0; i<n; i++)
+  for(var i=0; i<n; i++)
   { 
   	 ele.push(0);
   }
-  return SSO.Vector.new_one(ele);
+  return SSO.VecBin.new_one(ele);
 };
  
 SSO.VecBin.l = function(n) {
   var ele = [];
-  for(i=0; i<n; i++)
+  for(var i=0; i<n; i++)
   { 
   	 ele.push(1);
   }
