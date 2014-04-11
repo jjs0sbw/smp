@@ -1,7 +1,4 @@
-// First standard test
-test("First test", function() {
-	ok( 1 == "1", "Passed!");
-});
+// Unit tests for the sso_binary_math.js
 
 test("SSO_binary_math.available", function() {
 	ok( SSO.notice == "Special binary matrix and vector type.", "SSO notice is not here");	
@@ -42,3 +39,52 @@ test("SSO_binary_math.VecBin.l", function() {
 	var input = SSO.VecBin.l(n).elements;
 	deepEqual(input, output, "New ones vector is invalid");	
 });
+
+test("SSO_binary_math.VecBin.l", function() {
+	var n = 5;
+	var output = [1,1,1,1,1];
+	var input = SSO.VecBin.l(n).elements;
+	deepEqual(input, output, "New ones vector is invalid");	
+});
+
+test("SSO_binary_math.VecBin.setE", function() {
+	var elements = [1,2,3,2,1];
+	var changed_elements = [8,2,3,2,1];
+	var new_vb = SSO.VecBin.new_one(elements);
+	new_vb.setE(1, 8);
+	deepEqual(new_vb.elements, changed_elements, "Incorrect vector element change");	
+});
+
+test("SSO_binary_math.VecBin.indexOf", function() {
+	var elements = [1,2,99,2,1];
+	var new_vb = SSO.VecBin.new_one(elements);
+	var result = new_vb.indexOf(99);
+	equal(result, 3, "Incorrect vector element index");	
+});
+
+test("SSO_binary_math.VecBin.view", function() {
+	var elements = [1,2,99,2,1];
+	var new_vb = SSO.VecBin.new_one(elements);
+	var result = new_vb.view();
+	equal(result, '[1, 2, 99, 2, 1]', "Incorrect vector element view");	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
