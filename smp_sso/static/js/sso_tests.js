@@ -69,14 +69,61 @@ test("SSO_binary_math.VecBin.view", function() {
 	equal(result, '[1, 2, 99, 2, 1]', "Incorrect vector element view");	
 });
 
+test("SSO_binary_math.VecBin.setElements", function() {
+	var elements = [100,99,98,97,96];
+	var new_vb = SSO.VecBin.new_one(elements);
+	var result = new_vb.setElements(elements);
+	equal(result.elements, new_vb.elements, "Incorrect element vector");	
+	var new_elements = [20,21,22, 23,24];
+	var new_result = new_vb.setElements(new_elements);
+	deepEqual(new_result.elements, new_elements, "Incorrect new elements vector");
+});
 
+test("SSO_binary_math.MatrixBin.e", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var ele = output.e(1,3);
+	equal( 3, ele, "New matrix element is invalid");	
+});
 
+test("SSO_binary_math.MatrixBin.new_one", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	deepEqual( output.elements, elements, "New matrix elements are invalid");	
+});
 
+test("SSO_binary_math.MatrixBin.Id", function() {
+	var elements = [[1,0,0],
+					[0,1,0],
+					[0,0,1]]; 
+	var output = SSO.MatrixBin.Id(3);
+	deepEqual( output.elements, elements, "New id matrix elements are invalid");	
+});
 
+test("SSO_binary_math.MatrixBin.O", function() {
+	var elements = [[0,0,0],
+					[0,0,0],
+					[0,0,0]] ;
+	var output = SSO.MatrixBin.O(3);
+	deepEqual( output.elements, elements, "New zero matrix elements are invalid");	
+});
 
-
-
-
+test("SSO_binary_math.MatrixBin.setE", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	output.setE(1,3, 99);
+	var new_elements = [[1,2,99],
+					    [4,5,6],
+					    [7,8,9]];
+	var new_output = output.elements;
+	deepEqual( new_elements, new_output, "New matrix elements are invalid");	
+});
 
 
 
