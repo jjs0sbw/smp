@@ -125,6 +125,63 @@ test("SSO_binary_math.MatrixBin.setE", function() {
 	deepEqual( new_elements, new_output, "New matrix elements are invalid");	
 });
 
+test("SSO_binary_math.MatrixBin.row", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_row = output.row(1).elements;
+	var returned_row = [1,2,3];
+	deepEqual( new_row, returned_row, "New row elements are invalid");	
+});
+
+test("SSO_binary_math.MatrixBin.setRow", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_row = SSO.VecBin.new_one([77, 44, 22]);
+	output.setRow(1, new_row);
+	var new_elements = [[77,44,22],
+					    [4,5,6],
+					    [7,8,9]];
+	var new_output = output.elements;
+	deepEqual( new_elements, new_output, "New row elements are invalid");	
+});
+
+test("SSO_binary_math.MatrixBin.col", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_col = output.col(1).elements;
+	var returned_col = [1,4,7];
+	deepEqual( new_col, returned_col, "New column elements are invalid");	
+});
+
+test("SSO_binary_math.MatrixBin.setCol", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_col = SSO.VecBin.new_one([77, 44, 22]);
+	output.setCol(1, new_col);
+	var new_elements = [[77,2,3],
+					    [44,5,6],
+					    [22,8,9]];
+	var new_output = output.elements;
+	deepEqual( new_elements, new_output, "New col elements are invalid");	
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
