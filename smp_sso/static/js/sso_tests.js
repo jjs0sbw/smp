@@ -1,5 +1,7 @@
 // Unit tests for the sso_binary_math.js
 
+// SSO code
+
 test("SSO_binary_math.available", function() {
 	ok( SSO.notice == "Special binary matrix and vector type.", "SSO notice is not here");	
 });
@@ -11,6 +13,8 @@ test("SSO_binary_math.author", function() {
 test("SSO_binary_math.limit", function() {
 	ok( SSO.limit == 1e-5);	
 });
+
+// VecBin code
 
 test("SSO_binary_math.VecBin.new_one_0", function() {
 	var elements = [1,2,3,4,5];
@@ -78,6 +82,8 @@ test("SSO_binary_math.VecBin.setElements", function() {
 	var new_result = new_vb.setElements(new_elements);
 	deepEqual(new_result.elements, new_elements, "Incorrect new elements vector");
 });
+
+// MatrixBin code
 
 test("SSO_binary_math.MatrixBin.e", function() {
 	var elements = [[1,2,3],
