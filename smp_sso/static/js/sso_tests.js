@@ -180,11 +180,51 @@ test("SSO_binary_math.MatrixBin.setCol", function() {
 });
 
 
+test("SSO_binary_math.MatrixBin.rows", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var number_of_rows = output.rows();
+	var value = 3;
+	equal( number_of_rows, 3, "Wrong number of rows");	
+});
+
+test("SSO_binary_math.MatrixBin.colus", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var number_of_columns = output.colus();
+	var value = 3;
+	equal( number_of_columns, 3, "Wrong number of columns");	
+});
 
 
+test("SSO_binary_math.MatrixBin.dup", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_matrix = output.dup().elements;
+	deepEqual( new_matrix, elements, "Invalid dup function");	
+});
 
 
-
+test("SSO_binary_math.MatrixBin.map", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_matrix = output.map(function(x) { return x; });
+	deepEqual( new_matrix.elements, elements, "Invalid map function");	
+	var elements_2 = [[2,4,6],
+					[8,10,12],
+					[14,16,18]];
+    var new_matrix_t2 = output.map(function(x) { return x * 2; });
+    deepEqual( new_matrix_t2.elements, elements_2, "Invalid map function");
+	
+});
 
 
 
