@@ -226,13 +226,58 @@ test("SSO_binary_math.MatrixBin.map", function() {
 	
 });
 
+test("SSO_binary_math.MatrixBin.isSameSizeAs", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var new_matrix = output.map(function(x) { return x * 3; });
+    equal( output.isSameSizeAs(new_matrix), true, "Matrices are not the same size");
+	
+});
 
+test("SSO_binary_math.MatrixBin.add", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+	var elements_2 = [[2,4,6],
+					[8,10,12],
+					[14,16,18]];
+    var add_m = SSO.MatrixBin.new_one(elements_2);
+    var answer = [[3,6,9],
+    			  [12,15,18],
+    			  [21,24,27]]
+    var sum_matrix = output.add(add_m);
+    deepEqual(sum_matrix.elements, answer, "Invalid add function");
+	
+});
 
+test("SSO_binary_math.MatrixBin.subtract", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var answer = [[3,6,9],
+    			  [12,15,18],
+    			  [21,24,27]]
+	var output = SSO.MatrixBin.new_one(answer);
+	var elements_2 = [[2,4,6],
+					[8,10,12],
+					[14,16,18]];
+    var subtract_m = SSO.MatrixBin.new_one(elements_2);
+    var subtract_matrix = output.subtract(subtract_m);
+    deepEqual( subtract_matrix.elements, elements, "Invalid subtract function");
+	
+});
 
-
-
-
-
+test("SSO_binary_math.MatrixBin.leftMultiply", function() {
+	var elements = [[1,2,3],
+					[4,5,6],
+					[7,8,9]];
+	var output = SSO.MatrixBin.new_one(elements);
+    equal( output.leftMultiply(output), true, "Can not multiply from left");
+	
+});
 
 
 
