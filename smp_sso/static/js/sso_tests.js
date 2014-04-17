@@ -279,6 +279,37 @@ test("SSO_binary_math.MatrixBin.leftMultiply", function() {
 	
 });
 
+test("SSO_binary_math.MatrixBin.boolMultiply", function() {
+	var elements_one = [[0,1,0],
+					[0,0,1],
+					[1,0,0]];
+	var elements_two = [[0,0,1],
+    			  [1,0,0],
+    			  [0,1,0]]
+	var matrix_one = SSO.MatrixBin.new_one(elements_one);
+	var matrix_two = SSO.MatrixBin.new_one(elements_two);
+	var answer = [[1,0,0],
+				  [0,1,0],
+				  [0,0,1]];
+    var bool_multiply_m = matrix_one.boolMultiply(matrix_two);
+    deepEqual( bool_multiply_m.elements, answer, "Invalid boolMultiply function");
+	
+});
+
+test("SSO_binary_math.MatrixBin.setElements", function() {
+	var elements_one = [[0,1,0],
+					[0,0,1],
+					[1,0,0]];
+	var matrix_one = SSO.MatrixBin.new_one(elements_one);
+	var elements_two = [[1,2,3],
+				  	    [4,5,6],
+				        [7,8,9]];
+    matrix_one.setElements(elements_two);
+    deepEqual(matrix_one.elements, elements_two, "Invalid setElements function");
+	
+});
+
+
 
 
 
