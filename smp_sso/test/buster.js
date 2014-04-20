@@ -11,7 +11,11 @@ config["SSO browser tests"] = {
 	],
 	tests: [
 		"test/*-test.js"
-	]
+	],
+	resources: [{
+		path: "/~jjs0sbw/smp_sso",
+		backend: "http://localhost"
+	}]
 };
 	// Add more configuration groups as needed
 	
