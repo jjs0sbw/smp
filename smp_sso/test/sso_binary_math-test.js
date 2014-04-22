@@ -110,6 +110,16 @@ buster.testCase("Binary math addition test", {
 			var new_output = output.elements;
 			assert.equals(new_elements, new_output);
         },
+        "sso MatrixBin.row test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	assert.equals(output.elements, elements);
+        	var new_row = output.row(1).elements;
+			var returned_row = [1,2,3];
+			assert.equals(new_row, returned_row);
+        }
         
         
 
