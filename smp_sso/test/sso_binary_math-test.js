@@ -119,9 +119,73 @@ buster.testCase("Binary math addition test", {
         	var new_row = output.row(1).elements;
 			var returned_row = [1,2,3];
 			assert.equals(new_row, returned_row);
+        },
+        
+        "sso MatrixBin.setRow test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	assert.equals(output.elements, elements);
+        	var new_row = sso.VecBin.new_one([77, 44, 22]);
+        	output.setRow(1, new_row)
+			var new_elements = [[77,44,22],
+								[4,5,6],
+								[7,8,9]];
+		    var new_output = output.elements;
+			assert.equals(new_elements, new_output);
+        },
+        "sso MatrixBin.col test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	assert.equals(output.elements, elements);
+        	var new_col = output.col(1).elements;
+			var returned_col = [1,4,7];
+			assert.equals(new_col, returned_col);
+        },
+        "sso MatrixBin.setCol test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	assert.equals(output.elements, elements);
+        	var new_col = sso.VecBin.new_one([77, 44, 22]);
+        	output.setCol(1, new_col)
+			var new_elements = [[77,2,3],
+								[44,5,6],
+								[22,8,9]];
+		    var new_output = output.elements;
+			assert.equals(new_elements, new_output);
+        },
+        "sso MatrixBin.rows test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	var number_of_rows = output.rows();
+			var value = 3;
+			assert.equals(number_of_rows, value);
+        },
+         "sso MatrixBin.colus test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	var number_of_columns = output.colus();
+			var value = 3;
+			assert.equals(number_of_columns, value);
+        },
+        "sso MatrixBin.dup test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	var new_matrix = output.dup().elements;
+			assert.equals(new_matrix, elements);
         }
-        
-        
+
 
              
         
