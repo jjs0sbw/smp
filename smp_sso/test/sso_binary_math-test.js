@@ -184,9 +184,100 @@ buster.testCase("Binary math addition test", {
         	var output = sso.MatrixBin.new_one(elements);
         	var new_matrix = output.dup().elements;
 			assert.equals(new_matrix, elements);
-        }
-
-
-             
+        },
+         "sso MatrixBin.map test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	var new_matrix = output.map(function(x) { return x });
+        	assert.equals(new_matrix.elements, elements);
+        	var elements_2 = [[2,4,6],
+        					  [8,10,12],
+        					  [14,16,18]];
+            var new_matrix_t2 = output.map(function(x) {return x * 2; });
+			assert.equals(new_matrix_t2.elements, elements_2);
+        },
+        "sso MatrixBin.isSameSizeAs test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	var new_matrix = output.dup().elements;
+			assert.equals(output.isSameSizeAs(new_matrix), true);
+        },
+        "sso MatrixBin.add test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+        	var new_matrix = output.map(function(x) { return x });
+        	assert.equals(new_matrix.elements, elements);
+        	var elements_2 = [[2,4,6],
+        					  [8,10,12],
+        					  [14,16,18]];
+            var add_m  = sso.MatrixBin.new_one(elements_2);
+            var answer = [[3,6,9],
+            			  [12,15,18],
+            			  [21,24,27]];
+            var sum_matrix = output.add(add_m);
+			assert.equals(sum_matrix.elements, answer);
+        },
+        "sso MatrixBin.subtract test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+            var elements_3 = [[3,6,9],
+            			      [12,15,18],
+            			      [21,24,27]];
+        	var output = sso.MatrixBin.new_one(elements_3);
+        	var elements_2 = [[2,4,6],
+        					  [8,10,12],
+        					  [14,16,18]];
+            var subtract_m  = sso.MatrixBin.new_one(elements_2);
+            var subtract_matrix = output.subtract(subtract_m);
+			assert.equals(subtract_matrix.elements, elements);
+        },
+         "sso MatrixBin.leftMultiply test": function () {
+        	var elements = [[1,2,3],
+        					[4,5,6],
+        					[7,8,9]];
+        	var output = sso.MatrixBin.new_one(elements);
+			assert.equals(output.leftMultiply(output), true);
+        },
+          "sso MatrixBin.boolMultiply test": function () {
+        	var elements_one = [[0,1,0],
+        					    [0,0,1],
+        					    [1,0,0]];
+        	var elements_two = [[0,0,1],
+    			      			[1,0,0],
+    			 			    [0,1,0]];
+        	var matrix_one = sso.MatrixBin.new_one(elements_one);
+        	var matrix_two = sso.MatrixBin.new_one(elements_two);
+        	assert.equals(matrix_one.elements, elements_one);
+        	assert.equals(matrix_two.elements, elements_two);
+        	var answer = [[1,0,0],
+				  		  [0,1,0],
+				  		  [0,0,1]];
+            var bool_multiply_matrix = matrix_one.boolMultiply(matrix_two);
+			assert.equals(bool_multiply_matrix.elements, answer);
+        },
+        "sso MatrixBin.setElements test": function () {
+        	var elements_one = [[1,2,3],
+        				    	[4,5,6],
+        				  	    [7,8,9]];
+        	var matrix_one = sso.MatrixBin.new_one(elements_one);
+        	var elements_two = [[1,2,3],
+				  	            [4,5,6],
+				                [7,8,9]];
+			matrix_one.setElements(elements_two);
+			assert.equals(matrix_one.elements, elements_two);
+        },
+         "sso_win document.Id.one test": function () {
+         	//var element = window.document.getElementById("main_h1");
+        	assert.equals(1, 1 );
+        },
+        
+        
         
 });

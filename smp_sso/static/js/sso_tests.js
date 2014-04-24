@@ -1,6 +1,6 @@
-// Unit tests for the sso_binary_math.js
+// SSO unit tests - math and main
 
-// SSO code
+// Unit tests for the sso_binary_math.js
 
 test("SSO_binary_math.available", function() {
 	ok( SSO.notice == "Special binary matrix and vector type.", "SSO notice is not here");	
@@ -247,7 +247,7 @@ test("SSO_binary_math.MatrixBin.add", function() {
     var add_m = SSO.MatrixBin.new_one(elements_2);
     var answer = [[3,6,9],
     			  [12,15,18],
-    			  [21,24,27]]
+    			  [21,24,27]];
     var sum_matrix = output.add(add_m);
     deepEqual(sum_matrix.elements, answer, "Invalid add function");
 	
@@ -259,7 +259,7 @@ test("SSO_binary_math.MatrixBin.subtract", function() {
 					[7,8,9]];
 	var answer = [[3,6,9],
     			  [12,15,18],
-    			  [21,24,27]]
+    			  [21,24,27]];
 	var output = SSO.MatrixBin.new_one(answer);
 	var elements_2 = [[2,4,6],
 					[8,10,12],
@@ -309,7 +309,7 @@ test("SSO_binary_math.MatrixBin.setElements", function() {
 	
 });
 
-
+// Unit tests for the sso.js
 
 
 

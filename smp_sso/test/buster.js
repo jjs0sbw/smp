@@ -6,14 +6,15 @@ config["SSO browser tests"] = {
 	rootPath: "../",
 	sources: [
 		"lib/strftime.js",
+		//"static/js/sso.js",
 		"static/js/sso_binary_math.js",
-                "index.html"
+        "index.html"
 	],
 	tests: [
 		"test/*-test.js"
 	],
 	resources: [{
-		path: "/~jjs0sbw/smp_sso",
+		path: "~jjs0sbw/smp_sso/",
 		backend: "http://localhost"
 	}]
 };
