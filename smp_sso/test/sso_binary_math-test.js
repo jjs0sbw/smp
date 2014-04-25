@@ -1,5 +1,6 @@
 "use strict"
 var sso = window.SSO;
+var ssologic = window.SSOLogic;
 var assert = buster.assert;
 
 buster.testCase("Binary math addition test", {
@@ -276,8 +277,22 @@ buster.testCase("Binary math addition test", {
          "sso_win document.Id.one test": function () {
          	//var element = window.document.getElementById("main_h1");
         	assert.equals(1, 1 );
-        },
-        
-        
+        } 
         
 });
+
+buster.testCase("SSO application logic test", {
+	"test application logic": function () {
+            assert.equals( 1 + 1, 2);
+        },
+        "sso_logic notice test": function () {
+        	assert.equals( ssologic.notice, "An Abstract Relation Type (ART) implementation.");
+        },
+        "sso_logic author test": function () {
+        	assert.equals(ssologic.author, "Joseph James Simpson");
+        },
+});
+
+
+
+
