@@ -15,12 +15,6 @@
  * If not, see <http://www.gnu.org/licenses/>
  */
  
-var SSOLogic = {
-  purpose: "Operational logic for SSO web application",
-  notice: "An Abstract Relation Type (ART) implementation.",
-  reference: "http://systemsconcept.org/",
-  author: "Joseph James Simpson"
-}; 
 
  window.onload = function() {
                     document.getElementById("one").value = "N";
