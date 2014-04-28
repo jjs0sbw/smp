@@ -1,0 +1,18 @@
+SSO user story
+
+Joe has the names of 19 cities that he wants to order using the natural language 
+relationship "north-of."  Joe knows that each city is located at a different latitude.
+Joe has access to a system that will provide him the real location of two selected cities.
+The location information associated with each of the two cities pairs costs $100.00.  Joe wants to minimize the cost of ordering the cities.
+
+Joe also has access to the strict subordination ordering (SSO) web application (SSOWA) that allows him to enter location information about two cities at a time.  The SSOWA contains a main page which displays a graphical representation of the current state of the ordering process as well as process specific data entry forms.
+
+NOTE: This specific context has been chosen to eliminate some of the preparation work necessary in most real world applications.  This preparation work includes:
+	1) Agreeing on the natural language relationship semantics,
+	2) Creating an agreement process,
+	3) Performing the agreement process,
+	4) Documenting the outcome of the agreement process.
+The meaning of the natural language relationship “north-of” is well established and the location of cities on a map are also well known.  Therefore, steps 1 through need not be performed.
+
+In future work, natural language relationship semantics that may need group consensus will be used to further develop the user story and use cases associated with a specific type of structural modeling.
+
