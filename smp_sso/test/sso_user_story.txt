@@ -14,5 +14,5 @@ NOTE: This specific context has been chosen to eliminate some of the preparation
 	4) Documenting the outcome of the agreement process.
 The meaning of the natural language relationship “north-of” is well established and the location of cities on a map are also well known.  Therefore, steps 1 through need not be performed.
 
-In future work, natural language relationship semantics that may need group consensus will be used to further develop the user story and use cases associated with a specific type of structural modeling.
+In future work, natural language relationship semantics that may need group consensus will be used to further developed the user story and use cases associated with a specific type of structural modeling.
 
