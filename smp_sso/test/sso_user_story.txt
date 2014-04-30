@@ -7,6 +7,8 @@ The location information associated with each of the two cities pairs costs $100
 
 Joe also has access to the strict subordination ordering (SSO) web application (SSOWA) that allows him to enter location information about two cities at a time.  The SSOWA contains a main page which displays a graphical representation of the current state of the ordering process as well as process specific data entry forms.
 
+The main page contains three graphic display areas.  One main are that displays the matrix.  Two associated graphic areas that display the matrix row and column numbers.
+
 NOTE: This specific context has been chosen to eliminate some of the preparation work necessary in most real world applications.  This preparation work includes:
 	1) Agreeing on the natural language relationship semantics,
 	2) Creating an agreement process,
