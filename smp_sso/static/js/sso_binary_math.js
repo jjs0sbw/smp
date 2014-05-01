@@ -15,7 +15,7 @@
  * If not, see <http://www.gnu.org/licenses/>
  */
  
-
+/*
  window.onload = function() {
                     document.getElementById("one").value = "N";
  	                document.getElementById("two").value = "N";
@@ -26,7 +26,7 @@
 					var initButton = document.getElementById("initButton");
 					initButton.onclick = initHandler;
 
- 	};
+ 	}; */
 
 var SSO = {
   limit: 1e-5,

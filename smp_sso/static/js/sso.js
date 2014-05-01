@@ -13,16 +13,6 @@
  * You should have received a copy of the GNU General Public License along with bsmp_wa_1.
  * If not, see <http://www.gnu.org/licenses/>
  */
-/* 
- var SSOLogic = {
-  purpose: "Operational logic for SSO web application",
-  notice: "An Abstract Relation Type (ART) implementation.",
-  reference: "http://systemsconcept.org/",
-  author: "Joseph James Simpson"
-}; 
-
-SSOLogic.Operations = function() {};
-*/
  
  // Add javascript code here to draw the SSO Grid
  // and add the initial color scheme..
@@ -31,7 +21,7 @@ SSOLogic.Operations = function() {};
  var gridText;
  var gridColor;
  var vNames;
- /*
+
  window.onload = function() {
                     document.getElementById("one").value = "N";
  	                document.getElementById("two").value = "N";
@@ -42,7 +32,7 @@ SSOLogic.Operations = function() {};
 					var initButton = document.getElementById("initButton");
 					initButton.onclick = initHandler;
 
- 	};*/
+ 	}; 
  	
  // initialize the window with a blank canvas 
  // and data input area..	
@@ -70,16 +60,20 @@ SSOLogic.Operations = function() {};
             
             //write out gridText 
             //writeToDocOne(gridText.view());	
-            		
+            //writeToDocOne(scan_upper_for_ones());	
             
+            /* 
             function writeToDocOne(message) {
     		document.getElementById("test_out").innerHTML = message;
-    }
-					
+    		}
+			*/		
 					
  	
     }
    
+	function writeToDocOne(message) {
+    		document.getElementById("test_out").innerHTML = message;
+    }    
     
 //################################################################################################
  //################################################################################################
@@ -286,9 +280,10 @@ SSOLogic.Operations = function() {};
         document.getElementById("processButton").style.display="none";
         document.getElementById("inferenceButton").style.display="none";
  		
- 		//writeToDocOne(gridColor.inspect());		
+ 		
  	}
- 	
+ 	//writeToDocOne("Just hit the enter data button");	
+ 	//writeToDocOne(scan_upper_for_ones(gridText));	
  }	
  
  //################################################################################################
@@ -687,13 +682,13 @@ SSOLogic.Operations = function() {};
  // If the sum of the adding operation is greater than zero (0) return false.
  // If the sum of the adding operation is equal to zero (0) return true
  
- function scan_upper_for_ones() {
+ function scan_upper_for_ones(gridText) {
      var num = 19;
      var sum = 0;
      var value = 0;
      for (var i = 0; i < num; i++) {
      	for(var j = 0; j <= i; j++) {
-     		value = gridText.elements[i,j];
+     		value = gridText.elements[j,i]; // swap i,j
      		sum = parseInt(sum) + parseInt(value);
      	}
       
