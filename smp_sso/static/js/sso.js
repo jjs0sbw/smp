@@ -59,7 +59,7 @@
             document.getElementById("northFalse").style.display="none";
             
             //write out gridText 
-            //writeToDocOne(gridText.view());	
+            writeToDocOne(gridText.view());	
             //writeToDocOne(scan_upper_for_ones());	
             
             /* 
@@ -283,7 +283,7 @@
  		
  	}
  	//writeToDocOne("Just hit the enter data button");	
- 	//writeToDocOne(scan_upper_for_ones(gridText));	
+ 	writeToDocOne(scan_upper_for_ones());	
  }	
  
  //################################################################################################
@@ -682,7 +682,7 @@
  // If the sum of the adding operation is greater than zero (0) return false.
  // If the sum of the adding operation is equal to zero (0) return true
  
- function scan_upper_for_ones(gridText) {
+ function scan_upper_for_ones() {
      var num = 19;
      var sum = 0;
      var value = 0;
