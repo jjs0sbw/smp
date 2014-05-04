@@ -3,20 +3,35 @@ SSO user story
 Joe has the names of 19 cities that he wants to order using the natural language 
 relationship "north-of."  Joe knows that each city is located at a different latitude.
 Joe has access to a system that will provide him the real location of two selected cities.
-The location information associated with each of the two cities pairs costs $100.00.  Joe wants to minimize the cost of ordering the cities.
+The location information associated with each of the two cities pairs costs $100.00.  
+Joe wants to minimize the cost of ordering the cities.
 
-Joe also has access to the strict subordination ordering (SSO) web application (SSOWA) that allows him to enter location information about two cities at a time.  The SSOWA contains a main page which displays a graphical representation of the current state of the ordering process as well as process specific data entry forms.
+Joe also has access to the strict subordination ordering (SSO) web application (SSOWA) 
+that allows him to enter location information about two cities at a time.  The SSOWA 
+contains a main page which displays a graphical representation of the current state of 
+the ordering process as well as process specific data entry forms.
 
-The main page contains three graphic display areas.  The main area that displays the matrix.  Two associated graphic areas that display the matrix row and column numbers.
+The main page contains three graphic display areas.  The main area that displays the 
+matrix.  Two associated graphic areas that display the matrix row and column numbers.
 
-A data entry form is provided to enter data.
+A data entry form is provided to enter data. Four buttons are provided on the SSOWA main
+page:
+	1) Initialize City Grid
+	2) Enter Data
+	3) Process Data
+	4) Infer Information
 
-NOTE: This specific context has been chosen to eliminate some of the preparation work necessary in most real world applications.  This preparation work includes:
+NOTE: This specific context has been chosen to eliminate some of the preparation work 
+necessary in most real world applications.  This preparation work includes:
 	1) Agreeing on the natural language relationship semantics,
 	2) Creating an agreement process,
 	3) Performing the agreement process,
 	4) Documenting the outcome of the agreement process.
-The meaning of the natural language relationship “north-of” is well established and the location of cities on a map are also well known.  Therefore, steps 1 through need not be performed.
+The meaning of the natural language relationship “north-of” is well established and the 
+location of cities on a map are also well known.  Therefore, steps 1 through 4 need not 
+be performed.
 
-In future work, natural language relationship semantics that may need group consensus will be used to further developed the user story and use cases associated with a specific type of structural modeling.
+In future work, natural language relationship semantics that may need group consensus 
+will be used to further developed the user story and use cases associated with a specific 
+type of structural modeling.
 
