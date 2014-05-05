@@ -283,7 +283,7 @@
  		
  	}
  	//writeToDocOne("Just hit the enter data button");	
- 	writeToDocOne(scan_upper_for_ones());	
+ 	writeToDocOne();	
  }	
  
  //################################################################################################
