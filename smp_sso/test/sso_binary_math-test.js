@@ -1,6 +1,5 @@
 "use strict"
 var sso = window.SSO;
-var ssologic = window.SSOLogic;
 var assert = buster.assert;
 
 buster.testCase("Binary math addition test", {
@@ -278,7 +277,11 @@ buster.testCase("Binary math addition test", {
         
 });
 
-
+buster.testCase("SSO Operations test", {
+     "test  SSO Operations": function () {
+            assert.equals( 1 + 1, 2);
+        }
+});
 
 
 

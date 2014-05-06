@@ -311,7 +311,9 @@ test("SSO_binary_math.MatrixBin.setElements", function() {
 
 // Unit tests for the sso.js
 
-
+test("SSO_Operations.author", function() {
+	ok( SSO_OP.author == "Joseph James Simpson");	
+});
 
 
 

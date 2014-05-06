@@ -14,13 +14,15 @@
  * If not, see <http://www.gnu.org/licenses/>
  */
  
- // Add javascript code here to draw the SSO Grid
- // and add the initial color scheme..
- // Global variables -- time to refactor these out --
- // need a global function and/or library -- use strict
- var gridText;
- var gridColor;
- var vNames;
+
+ var SSO_OP = {
+ 	author: "Joseph James Simpson",
+ 	notice: "Strict Sequential Ordering Operations Type."
+ };
+var gridText;
+var gridColor;
+var vNames;
+
 
  window.onload = function() {
                     document.getElementById("one").value = "N";

@@ -15,18 +15,7 @@
  * If not, see <http://www.gnu.org/licenses/>
  */
  
-/*
- window.onload = function() {
-                    document.getElementById("one").value = "N";
- 	                document.getElementById("two").value = "N";
- 					document.getElementById("northTrue").style.display="none";
- 					document.getElementById("northFalse").style.display="none";
- 					document.getElementById("moveData").style.display="none";
- 					
-					var initButton = document.getElementById("initButton");
-					initButton.onclick = initHandler;
 
- 	}; */
 
 var SSO = {
   limit: 1e-5,
