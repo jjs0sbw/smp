@@ -1,24 +1,20 @@
 "use strict";
 /*
  * Copyright (c) 2013, 2014 Joseph J. Simpson
- * This file is part of the Strict Subornation (SSO) web application (SSOWA).
- * This file in SSOWA is free software: you can redistribute ist and/or modify
+ * This file is part of the General Subornation (GSO) web application (GSOWA).
+ * This file in GSOWA is free software: you can redistribute ist and/or modify
  * it under the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * The SSOWA program is distributed in the hope that it will be useful, but WITHOUT
+ * The GSOWA program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
  * PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  * 
- * You should have received a copy of the GNU General Public License along with SSOWA.
+ * You should have received a copy of the GNU General Public License along with GSOWA.
  * If not, see <http://www.gnu.org/licenses/>
  */
  
 
- var SSO_OP = {
- 	author: "Joseph James Simpson",
- 	notice: "Strict Sequential Ordering Operations Type."
- };
 var gridText;
 var gridColor;
 var vNames;
@@ -47,10 +43,10 @@ var vNames;
 			var canvas_2 = document.getElementById("SSO_3");
 			var context_2 = canvas_2.getContext("2d");
 			
-			gridText = SSO.MatrixBin.O(19);
-			gridColor = SSO.MatrixBin.O(19);
+			gridText = GSO.MatrixBin.O(19);
+			gridColor = GSO.MatrixBin.O(19);
 			
-			vNames = SSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+			vNames = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
 			
 			initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);	
 			
@@ -347,7 +343,7 @@ var vNames;
 	
 	tempGridColor = gridColor.dup();
 	tempGridText = gridText.dup();
-	tempId = SSO.MatrixBin.Id(19);
+	tempId = GSO.MatrixBin.Id(19);
 	rMatrix = tempGridText.add(tempId);
 	
 	reachabilityMatrix(rMatrix);

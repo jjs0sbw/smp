@@ -2,57 +2,57 @@
 
 /*
  * Copyright (c) 2013, 2014 Joseph J. Simpson
- * This file is part of the Strict Subordination Ordering (SSO) web application (SSOWA).
- * This file in SSOWA is free software: you can redistribute ist and/or modify
+ * This file is part of the General Subordination Ordering (GSO) web application (GSOWA).
+ * This file in GSOWA is free software: you can redistribute ist and/or modify
  * it under the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * The SSOWA program is distributed in the hope that it will be useful, but WITHOUT
+ * The GSOWA program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
  * PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  * 
- * You should have received a copy of the GNU General Public License along with SSOWA.
+ * You should have received a copy of the GNU General Public License along with bsmp_wa_1.
  * If not, see <http://www.gnu.org/licenses/>
  */
  
 
 
-var SSO = {
+var GSO = {
   limit: 1e-5,
   notice: "Special binary matrix and vector type.",
   reference: "Societal Systems: Planning, Policy, and Complexity, 1976 - J. Warfield.",
   author: "Joseph James Simpson"
 }; 
 
-SSO.VecBin = function() {};
+GSO.VecBin = function() {};
 
-SSO.VecBin.new_one = function(ele) {
-  var Vb = new SSO.VecBin();
+GSO.VecBin.new_one = function(ele) {
+  var Vb = new GSO.VecBin();
   return Vb.setElements(ele);
 };
 
-var $Vb = SSO.VecBin.new_one;
+var $Vb = GSO.VecBin.new_one;
  
-SSO.VecBin.O = function(n) {
+GSO.VecBin.O = function(n) {
   var ele = [];
   for(var i=0; i<n; i++)
   { 
   	 ele.push(0);
   }
-  return SSO.VecBin.new_one(ele);
+  return GSO.VecBin.new_one(ele);
 };
  
-SSO.VecBin.l = function(n) {
+GSO.VecBin.l = function(n) {
   var ele = [];
   for(var i=0; i<n; i++)
   { 
   	 ele.push(1);
   }
   
-  return SSO.VecBin.new_one(ele);
+  return GSO.VecBin.new_one(ele);
 }; 
 
- SSO.VecBin.prototype = {
+ GSO.VecBin.prototype = {
   e: function(i) {
     return (i < 1 || i > this.elements.length) ? null : this.elements[i-1];
   },
@@ -87,15 +87,15 @@ SSO.VecBin.l = function(n) {
   } 
 };
 
-SSO.MatrixBin = function() {};
+GSO.MatrixBin = function() {};
 
-SSO.MatrixBin.new_one = function(els) {
-  var MB = new SSO.MatrixBin();
+GSO.MatrixBin.new_one = function(els) {
+  var MB = new GSO.MatrixBin();
   return MB.setElements(els);
 };
-var $Mb = SSO.MatrixBin.new_one;
+var $Mb = GSO.MatrixBin.new_one;
 
-SSO.MatrixBin.Id = function(n) {
+GSO.MatrixBin.Id = function(n) {
   var els = []; 
   var i;
   var j;
@@ -105,12 +105,12 @@ SSO.MatrixBin.Id = function(n) {
       els[i][j] = (i === j) ? 1 : 0;
     }
   }
-  return SSO.MatrixBin.new_one(els);
+  return GSO.MatrixBin.new_one(els);
 };
  
 
  
- SSO.MatrixBin.O = function(a) {
+ GSO.MatrixBin.O = function(a) {
   var els = []; 
   var i;
   var j;
@@ -120,12 +120,12 @@ SSO.MatrixBin.Id = function(n) {
       els[i][j] = 0;
     }
   }
-  return SSO.MatrixBin.new_one(els);
+  return GSO.MatrixBin.new_one(els);
 };
  
  
  
- SSO.MatrixBin.prototype = {
+ GSO.MatrixBin.prototype = {
   e: function(i,j) {
     if (i < 1 || i > this.elements.length || j < 1 || j > this.elements[0].length) { 
     	alert ("Matrix element, to return, is out of range, please enter valid element cell.");
@@ -148,7 +148,7 @@ SSO.MatrixBin.Id = function(n) {
     	alert ("Matrix row, to return, is out of range, please enter valid row.");
      	return null; 	
      }
-    return SSO.VecBin.new_one(this.elements[i-1]);
+    return GSO.VecBin.new_one(this.elements[i-1]);
   },
   
   setRow: function(i, newRow) { 
@@ -175,7 +175,7 @@ SSO.MatrixBin.Id = function(n) {
     }
     var col = [], n = this.elements.length;
     for (var i = 0; i < n; i++) { col.push(this.elements[i][j-1]); }
-    return SSO.VecBin.new_one(col);
+    return GSO.VecBin.new_one(col);
   },
   
   setCol: function(j, newColumn) {
@@ -206,11 +206,11 @@ SSO.MatrixBin.Id = function(n) {
   },
 
   dup: function() {
-    return SSO.MatrixBin.new_one(this.elements);
+    return GSO.MatrixBin.new_one(this.elements);
   },
 
   map: function(fn, context) {
-    if (this.elements.length === 0) { return SSO.MatrixBin.new_one([]); }
+    if (this.elements.length === 0) { return GSO.MatrixBin.new_one([]); }
     var els = []; 
     var i = this.elements.length; 
     var nj = this.elements[0].length; 
@@ -222,12 +222,12 @@ SSO.MatrixBin.Id = function(n) {
         els[i][j] = fn.call(context, this.elements[i][j], i + 1, j + 1);
       }
     }
-    return SSO.MatrixBin.new_one(els);
+    return GSO.MatrixBin.new_one(els);
   },
   
   isSameSizeAs: function(matrix) {
     var M = matrix.elements || matrix;
-    if (typeof(M[0][0]) === 'undefined') { M = SSO.MatrixBin.new_one(M).elements; }
+    if (typeof(M[0][0]) === 'undefined') { M = GSO.MatrixBin.new_one(M).elements; }
     if (this.elements.length === 0) { return M.length === 0; }
     return (this.elements.length === M.length &&
         this.elements[0].length === M[0].length);
@@ -236,7 +236,7 @@ SSO.MatrixBin.Id = function(n) {
   add: function(matrix) {
     if (this.elements.length === 0) return this.map(function(x) { return x });
     var M = matrix.elements || matrix;
-    if (typeof(M[0][0]) === 'undefined') { M = SSO.MatrixBin.new_one(M).elements; }
+    if (typeof(M[0][0]) === 'undefined') { M = GSO.MatrixBin.new_one(M).elements; }
     if (!this.isSameSizeAs(M)) { return null; }
     return this.map(function(x, i, j) { return x + M[i-1][j-1]; });
   },
@@ -244,7 +244,7 @@ SSO.MatrixBin.Id = function(n) {
    subtract: function(matrix) {
     if (this.elements.length === 0) return this.map(function(x) { return x });
     var M = matrix.elements || matrix;
-    if (typeof(M[0][0]) === 'undefined') { M = SSO.MatrixBin.new_one(M).elements; }
+    if (typeof(M[0][0]) === 'undefined') { M = GSO.MatrixBin.new_one(M).elements; }
     if (!this.isSameSizeAs(M)) { return null; }
     return this.map(function(x, i, j) { return x - M[i-1][j-1]; });
   }, 
@@ -252,7 +252,7 @@ SSO.MatrixBin.Id = function(n) {
   leftMultiply: function(binary_matrix) {
     if (this.elements.length === 0) { return false; }
     var M = binary_matrix.elements || binary_matrix;
-    if (typeof(M[0][0]) === 'undefined') { M = SSO.MatrixBin.new_one(M).elements; }
+    if (typeof(M[0][0]) === 'undefined') { M = GSO.MatrixBin.new_one(M).elements; }
     return (this.elements[0].length === M.length);
   },
   
@@ -263,7 +263,7 @@ SSO.MatrixBin.Id = function(n) {
     }
     var returnVector = binary_matrix.modulus ? true : false;
     var M = binary_matrix.elements || binary_matrix;
-    if (typeof(M[0][0]) === 'undefined') { M = SSO.MatrixBin.new_one(M).elements; }
+    if (typeof(M[0][0]) === 'undefined') { M = GSO.MatrixBin.new_one(M).elements; }
     if (!this.leftMultiply(M)) { return null; }
     var i = this.elements.length;
     var nj = M[0].length;
@@ -283,7 +283,7 @@ SSO.MatrixBin.Id = function(n) {
         if(sum !== 0) { elements[i][j] = 1;}
       }
     }
-    var M = SSO.MatrixBin.new_one(elements);
+    var M = GSO.MatrixBin.new_one(elements);
     return returnVector ? M.col(1) : M;
   },
 
@@ -316,7 +316,7 @@ SSO.MatrixBin.Id = function(n) {
     var n = this.elements.length;
     if (n === 0) return '[]';
     for (var i = 0; i < n; i++) {
-      matrix_rows.push(SSO.VecBin.new_one(this.elements[i]).view());
+      matrix_rows.push(GSO.VecBin.new_one(this.elements[i]).view());
     }
     return matrix_rows.join('<br>');
   },
