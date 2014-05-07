@@ -22,23 +22,23 @@
  
 GSO_OP.WebOps = function() {};
 
-GSO_OP.WebOps.new_one = function(grid1, grid2, grid3) {
+GSO_OP.WebOps.new_one = function(gridText, gridColor, gridNames) {
   var Wo = new GSO_OP.WebOps();
-  return Wo.setGrids(grid1, grid2, grid3);
+  return Wo.setGrids(gridText, gridColor, gridNames);
 };
 
 var $Wo = GSO_OP.WebOps.new_one;
  
-GSO.VecBin.init = function() {
-  var ele = [];
-  for(var i=0; i<n; i++)
-  { 
-  	 ele.push(0);
-  }
-  return GSO.VecBin.new_one(ele);
+GSO_OP.WebOps.init = function() {
+  var gridText = [];
+  var gridColor = [];
+  var gridNames = [];
+  
+  
+  return {'text':grid_1, 'color':grid_2, 'names':grid_3} ;
 };
  
-GSO.VecBin.l = function(n) {
+GSO_OP.WebOps.updateGrids = function(gridText, gridColor, gridNames) {
   var ele = [];
   for(var i=0; i<n; i++)
   { 
