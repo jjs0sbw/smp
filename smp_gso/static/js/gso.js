@@ -42,11 +42,16 @@ var vNames;
 			var context_1 = canvas_1.getContext("2d");
 			var canvas_2 = document.getElementById("SSO_3");
 			var context_2 = canvas_2.getContext("2d");
+			var result = GSO_OP.WebOps.init_zero();
 			
-			gridText = GSO.MatrixBin.O(19);
-			gridColor = GSO.MatrixBin.O(19);
+			gridText = result.text;
+			gridColor = result.color;
+			vNames = result.names;
+			//gridText = GSO.MatrixBin.O(19);
+			//gridColor = GSO.MatrixBin.O(19);
 			
-			vNames = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+			//vNames = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+			
 			
 			initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);	
 			

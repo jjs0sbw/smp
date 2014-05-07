@@ -29,14 +29,16 @@ GSO_OP.WebOps.new_one = function(gridText, gridColor, gridNames) {
 
 var $Wo = GSO_OP.WebOps.new_one;
  
-GSO_OP.WebOps.init = function() {
-  var gridText = [];
-  var gridColor = [];
-  var gridNames = [];
+GSO_OP.WebOps.init_zero = function() {
+  var gridText = GSO.MatrixBin.O(19);
+  var gridColor = GSO.MatrixBin.O(19);
+  var gridNames = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
   
-  
-  return {'text':grid_1, 'color':grid_2, 'names':grid_3} ;
+  return {text:gridText,
+  	      color:gridColor,
+  	      names:gridNames} ;
 };
+ 
  
 GSO_OP.WebOps.updateGrids = function(gridText, gridColor, gridNames) {
   var ele = [];
