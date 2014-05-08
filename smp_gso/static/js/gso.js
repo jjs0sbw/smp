@@ -85,57 +85,8 @@ var vNames;
  //#####
  //################################################################################################
  //################################################################################################
-	/*
-	function drawYellowCell(x, y, canvas, context, cellSize) {
-		var x1 = x;
-		var y1 = y;
-        context.fillStyle = "yellow";
-        context.fillRect(x1 * cellSize , y1 * cellSize , cellSize - 1, cellSize - 1);
-    }; */
-    /*
-    function enterYellowColor(x,y) {
-    	gridColor.setE(x+1,y+1,1);
-    }; */
-    /*
-    /*
-    function drawXGridCell(x, canvas_1, context_1, cellSize, vNames) {
-    	var text;
-        context_1.fillStyle = "wheat";
-        context_1.fillRect((x-1) * cellSize, 0, cellSize - 1, cellSize - 1);
-        context_1.fillStyle = "black";
-        context_1.font = "1em tahoma";
-        text = vNames.e(x);
-        if(x < 10){
-        	context_1.fillText(text, (x * cellSize)-20, 15);
-        };
-        if(x >=10) {
-        	context_1.fillText(text, (x * cellSize)-20, 15);
-        };
-    }; */
-    /*
-    function drawYGridCell(y, canvas_2, context_2, cellSize,vNames) {
-        var text;
-        context_2.fillStyle = "wheat";
-        context_2.fillRect(0, (y-1) * cellSize, cellSize - 1, cellSize - 1);
-        context_2.fillStyle = "black";
-        context_2.font = "1em tahoma";
-        text = vNames.e(y);
-        context_2.fillText(text, 0, (y * cellSize) - 5);
-    }; */
-    /*
-    function drawRedCell(x, y, canvas, context, cellSize) {
-        context.fillStyle = "red";
-        context.fillRect(x * cellSize , y * cellSize , cellSize - 1, cellSize - 1);
-    }; */
-    /*
-    function enterRedColor(x,y) {
-    	gridColor.setE(x+1,y+1,2);
-    }; */
-    /*
-    function drawGreenCell(x, y, canvas, context, cellSize) {
-        context.fillStyle = "green";
-        context.fillRect(x * cellSize , y * cellSize , cellSize - 1, cellSize - 1);
-    }; */
+	
+
     /*
     function enterGreenColor(x,y) {
     	gridColor.setE(x+1,y+1,3);
