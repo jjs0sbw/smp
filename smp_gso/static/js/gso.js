@@ -42,7 +42,7 @@ var vNames;
 			var context_1 = canvas_1.getContext("2d");
 			var canvas_2 = document.getElementById("SSO_3");
 			var context_2 = canvas_2.getContext("2d");
-			var result = GSO_OP.WebOps.init_zero();
+			var result = GSO_OP.WebOps.initZero();
 			
 			gridText = result.text;
 			gridColor = result.color;
@@ -53,8 +53,8 @@ var vNames;
 			//vNames = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
 			
 			
-			initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);	
-			
+			//initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);	
+			GSO_OP.WebOps.initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);
 			document.getElementById("one").value = "N";
  	        document.getElementById("two").value = "N";
 			document.getElementById("moveData").style.display="none";
@@ -85,18 +85,19 @@ var vNames;
  //#####
  //################################################################################################
  //################################################################################################
-	
+	/*
 	function drawYellowCell(x, y, canvas, context, cellSize) {
 		var x1 = x;
 		var y1 = y;
         context.fillStyle = "yellow";
         context.fillRect(x1 * cellSize , y1 * cellSize , cellSize - 1, cellSize - 1);
-    }
-    
+    }; */
+    /*
     function enterYellowColor(x,y) {
     	gridColor.setE(x+1,y+1,1);
-    }
-    
+    }; */
+    /*
+    /*
     function drawXGridCell(x, canvas_1, context_1, cellSize, vNames) {
     	var text;
         context_1.fillStyle = "wheat";
@@ -106,12 +107,12 @@ var vNames;
         text = vNames.e(x);
         if(x < 10){
         	context_1.fillText(text, (x * cellSize)-20, 15);
-        }
+        };
         if(x >=10) {
         	context_1.fillText(text, (x * cellSize)-20, 15);
-        }
-    }
-    
+        };
+    }; */
+    /*
     function drawYGridCell(y, canvas_2, context_2, cellSize,vNames) {
         var text;
         context_2.fillStyle = "wheat";
@@ -120,45 +121,45 @@ var vNames;
         context_2.font = "1em tahoma";
         text = vNames.e(y);
         context_2.fillText(text, 0, (y * cellSize) - 5);
-    }
-
+    }; */
+    /*
     function drawRedCell(x, y, canvas, context, cellSize) {
         context.fillStyle = "red";
         context.fillRect(x * cellSize , y * cellSize , cellSize - 1, cellSize - 1);
-    }
-    
+    }; */
+    /*
     function enterRedColor(x,y) {
     	gridColor.setE(x+1,y+1,2);
-    }
-    
+    }; */
+    /*
     function drawGreenCell(x, y, canvas, context, cellSize) {
         context.fillStyle = "green";
         context.fillRect(x * cellSize , y * cellSize , cellSize - 1, cellSize - 1);
-    }
-    
+    }; */
+    /*
     function enterGreenColor(x,y) {
     	gridColor.setE(x+1,y+1,3);
-    }
-    
+    };*/
+    /*
     function drawLightBlueCell(x, y, canvas, context, cellSize) {
         context.fillStyle = "lightblue";
         context.fillRect(x * cellSize , y * cellSize , cellSize - 1, cellSize - 1);
-    }
-    
+    };*/
+    /*
     function enterLightBlueColor(x,y) {
     	gridColor.setE(x+1,y+1,4);
-    }
-    
-    function drawOrangeCell(x, y, canvas, context, cellSize) {
+    };*/
+    /*
+    function drawOrangeCell(x, y, canvas, context, cellSize) { // function not used
         context.fillStyle = "orange";
         context.fillRect(x * cellSize , y * cellSize , cellSize - 1, cellSize - 1);
-    }
+    };
     
-    function enterOrangeColor(x,y) {
+    function enterOrangeColor(x,y) { // function not used
     	gridColor.setE(x+1,y+1,5);
-    }
+    }; */
     
-
+	/*
 	function drawText(x, y, canvas, context, cellSize, gridText){
 	  var text;	
    	  context.fillStyle = "black";
@@ -167,25 +168,25 @@ var vNames;
    	  text = gridText.e(x+1, y+1);
    	  context.fillText(text, (((x + 1) * cellSize) - (cellSize / 2)), (((y + 1) * cellSize) - (cellSize / 4)));
 	
-	}
-	
-	function drawText_1(x, y, canvas, context, cellSize){
+	};*/
+	/*
+	function drawText_1(x, y, canvas, context, cellSize){ // code not used
    	  context.fillStyle = "black";
    	  context.font = "1em tahoma";
    	  context.textAlign = "center";
    	  context.fillText("1", (((x + 1) * cellSize) - (cellSize / 2)), (((y + 1) * cellSize) - (cellSize / 4)));
 	
-	}
-	
-	function drawText_0(x, y, canvas, context, cellSize){
+	}; */
+	/*
+	function drawText_0(x, y, canvas, context, cellSize){ // code not used
    	  context.fillStyle = "black";
    	  context.font = "1em tahoma";
    	  context.textAlign = "center";
    	  context.fillText("0", (((x + 1) * cellSize) - (cellSize / 2)), (((y + 1) * cellSize) - (cellSize / 4)));
 	
-	}
+	};*/
 	
-	
+	/*
 	function initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2) { 
         var x;
         var y;  
@@ -205,18 +206,18 @@ var vNames;
                 	drawYellowCell(x, y, canvas, context, cellSize);
                 	enterYellowColor(x, y);
                 	drawYGridCell(y+1, canvas_2, context_2, cellSize, vNames); 
-            	}
+            	};
               
             	if(x == y){
             
               		drawRedCell(x, y, canvas, context, cellSize);
               		enterRedColor(x, y);
-            	}
+            	};
            
             	drawText(x, y, canvas, context, cellSize, gridText);          
-            } 
-        }
-    }
+            }; 
+        };
+    };*/
  
  //################################################################################################
  //################################################################################################
@@ -250,8 +251,8 @@ var vNames;
  		// need to select the correct index of the input values
  		gridText.setE(rcOneIndex, rcTwoIndex, 1); 
  		gridText.setE(rcTwoIndex, rcOneIndex, 0); 
- 		enterRedColor(rcTwoIndex-1, rcOneIndex-1); 
- 		enterGreenColor(rcOneIndex-1, rcTwoIndex-1); 
+ 		GSO_OP.WebOps.enterRedColor(rcTwoIndex-1, rcOneIndex-1); 
+ 		GSO_OP.WebOps.enterGreenColor(rcOneIndex-1, rcTwoIndex-1); 
  		
  		// need to redraw the main canvas using text values
  		// use the gridColor matrix
@@ -261,20 +262,20 @@ var vNames;
             	switch(color)
             	{
             		case 1:
-            			drawYellowCell(ex, ey, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawYellowCell(ex, ey, canvas, context, cellSize);
             			break;
             		case 2:
-            			drawRedCell(ex, ey, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawRedCell(ex, ey, canvas, context, cellSize);
             			break;
             		case 3:
-            			drawGreenCell(ex, ey, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawGreenCell(ex, ey, canvas, context, cellSize);
             			break;
             		case 5:
-            			drawLightBlueCell(ex, ey, canvas, context, cellSize);
+            			drawLightBlueCell(ex, ey, canvas, context, cellSize); // code not used
             			break;	
             	}
             	
-            	drawText(ex, ey, canvas, context, cellSize, gridText);       
+            	GSO_OP.WebOps.drawText(ex, ey, canvas, context, cellSize, gridText);       
         	} 
  		}
  		document.getElementById("northTrue").style.display="inline";
@@ -285,8 +286,8 @@ var vNames;
  		
  		
  	}
- 	//writeToDocOne("Just hit the enter data button");	
- 	writeToDocOne();	
+ 	writeToDocOne("Just hit the enter data button");	
+ 	//writeToDocOne();	
  }	
  
  //################################################################################################
@@ -356,28 +357,28 @@ var vNames;
 	//############## draw code here ########
     // need to redraw the main canvas using text values
  	for (ix = 0; ix < 19 ; ix++) { 
- 		drawXGridCell(ix+1, canvas_1, context_1, cellSize, vNames); //added +1
+ 		GSO_OP.WebOps.drawXGridCell(ix+1, canvas_1, context_1, cellSize, vNames); //added +1
         for (iy = 0; iy < 19; iy++) { 
                 var color;
-        		drawYGridCell(iy+1, canvas_2, context_2, cellSize, vNames); //added +1
+        		GSO_OP.WebOps.drawYGridCell(iy+1, canvas_2, context_2, cellSize, vNames); //added +1
             	color = gridColor.e(ix+1,iy+1);
             	switch(color)
             	{
             		case 1:
-            			drawYellowCell(ix, iy, canvas, context, cellSize); 
+            			GSO_OP.WebOps.drawYellowCell(ix, iy, canvas, context, cellSize); 
             			break;
             		case 2:
-            			drawRedCell(ix, iy, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawRedCell(ix, iy, canvas, context, cellSize);
             			break;
             		case 3:
-            			drawGreenCell(ix, iy, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawGreenCell(ix, iy, canvas, context, cellSize);
             			break;
             		case 5:
-            			drawLightBlueCell(ix, iy, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawLightBlueCell(ix, iy, canvas, context, cellSize);
             			break;	
             	}
             	
-            	drawText(ix, iy, canvas, context, cellSize, gridText);   		
+            	GSO_OP.WebOps.drawText(ix, iy, canvas, context, cellSize, gridText);   		
         }	
  	}
 
@@ -518,28 +519,28 @@ var vNames;
  	// use the gridColor matrix
  	for (mx = 0; mx < 19 ; mx++) { 
  	    var color;
- 		drawXGridCell(mx+1, canvas_1, context_1, cellSize, vNames); //added +1
+ 		GSO_OP.WebOps.drawXGridCell(mx+1, canvas_1, context_1, cellSize, vNames); //added +1
         for (my = 0; my < 19; my++) { 
-        		drawYGridCell(my+1, canvas_2, context_2, cellSize, vNames); //added +1
+        		GSO_OP.WebOps.drawYGridCell(my+1, canvas_2, context_2, cellSize, vNames); //added +1
             	color = gridColor.e(mx+1,my+1);
             	switch(color)
             	{
             		case 1:
-            			drawYellowCell(mx, my, canvas, context, cellSize); 
+            			GSO_OP.WebOps.drawYellowCell(mx, my, canvas, context, cellSize); 
             			break;
             		case 2:
-            			drawRedCell(mx, my, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawRedCell(mx, my, canvas, context, cellSize);
             			//alert ("Drawing red cell in the box swap function");
             			break;
             		case 3:
-            			drawGreenCell(mx, my, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawGreenCell(mx, my, canvas, context, cellSize);
             			break;
             		case 5:
-            			drawLightBlueCell(mx, my, canvas, context, cellSize);
+            			drawLightBlueCell(mx, my, canvas, context, cellSize); // code not used
             			break;		
             	}
             	
-            	drawText(mx, my, canvas, context, cellSize, gridText);   		
+            	GSO_OP.WebOps.drawText(mx, my, canvas, context, cellSize, gridText);   		
         }	
  	}
         
@@ -622,29 +623,29 @@ var vNames;
     // need to redraw the main canvas using text values
  	for (sx = 0; sx < 19 ; sx++) { 
  	    var color;
- 		drawXGridCell(sx+1, canvas_1, context_1, cellSize, vNames); // added +1
+ 		GSO_OP.WebOps.drawXGridCell(sx+1, canvas_1, context_1, cellSize, vNames); // added +1
         for (sy = 0; sy < 19; sy++) { 
-        		drawYGridCell(sy+1, canvas_2, context_2, cellSize, vNames); // added +1
+        		GSO_OP.WebOps.drawYGridCell(sy+1, canvas_2, context_2, cellSize, vNames); // added +1
             	color = gridColor.e(sx+1,sy+1);
             	switch(color)
             	{
             		case 1:
-            			drawYellowCell(sx, sy, canvas, context, cellSize); 
+            			GSO_OP.WebOps.drawYellowCell(sx, sy, canvas, context, cellSize); 
             			break;
             		case 2:
-            			drawRedCell(sx, sy, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawRedCell(sx, sy, canvas, context, cellSize);
             			//alert ("Drawing red cell in the box swap function");
             			break;
             		case 3:
-            			drawGreenCell(sx, sy, canvas, context, cellSize);
+            			GSO_OP.WebOps.drawGreenCell(sx, sy, canvas, context, cellSize);
             			break;
             		case 5:
-            			drawLightBlueCell(sx, sy, canvas, context, cellSize);
+            			drawLightBlueCell(sx, sy, canvas, context, cellSize); // code not used
             			break;	
             			
             	}
             	
-            	drawText(sx, sy, canvas, context, cellSize, gridText);  	
+            	GSO_OP.WebOps.drawText(sx, sy, canvas, context, cellSize, gridText);  	
         }	
  	}
         
