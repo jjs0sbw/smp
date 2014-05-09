@@ -58,19 +58,8 @@ var vNames;
             //write out gridText 
             GSO_OP.WebOps.writeToDocOne(gridText.view());	
             //writeToDocOne(scan_upper_for_ones());	
-            
-            /* 
-            function writeToDocOne(message) {
-    		document.getElementById("test_out").innerHTML = message;
-    		}
-			*/		
-					
- 	
-    }
-   /*
-	function writeToDocOne(message) {
-    		document.getElementById("test_out").innerHTML = message;
-    }*/    
+
+    };
     
  //################################################################################################
  //################################################################################################
@@ -79,6 +68,7 @@ var vNames;
  //#####
  //################################################################################################
  //################################################################################################
+ /*
  function enterData() {
  	var rcOne = document.getElementById("one").value;
  	var rcTwo = document.getElementById("two").value;
@@ -129,8 +119,8 @@ var vNames;
             	}
             	
             	GSO_OP.WebOps.drawText(ex, ey, canvas, context, cellSize, gridText);       
-        	} 
- 		}
+        	}; 
+ 		};
  		document.getElementById("northTrue").style.display="inline";
  		document.getElementById("northFalse").style.display="inline";
  		document.getElementById("entryButton").style.display="none";
@@ -138,10 +128,10 @@ var vNames;
         document.getElementById("inferenceButton").style.display="none";
  		
  		
- 	}
+ 	};
  	GSO_OP.WebOps.writeToDocOne("Just hit the enter data button");	
  	//writeToDocOne();	
- }	
+ };	 */
  
  //################################################################################################
  //################################################################################################
