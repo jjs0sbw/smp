@@ -167,7 +167,9 @@ GSO_OP.WebOps.initGrid = function(canvas, context, canvas_1, context_1, canvas_2
   };
 };
  
- 
+GSO_OP.WebOps.writeToDocOne = function(message) {
+    		document.getElementById("test_out").innerHTML = message;
+    }    
  
 
  	

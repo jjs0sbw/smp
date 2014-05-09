@@ -317,11 +317,11 @@ test("GSO_Operations.author", function() {
 	ok( GSO_OP.author == "Joseph James Simpson");	
 });
 
-test("GSO_OP.WebOps.init_zero", function() {
+test("GSO_OP.WebOps.initZero", function() {
   var grid_1 = GSO.MatrixBin.O(19);
   var grid_2 = GSO.MatrixBin.O(19);
   var grid_3 = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
-  var result = GSO_OP.WebOps.init_zero();
+  var result = GSO_OP.WebOps.initZero();
   deepEqual(grid_1, result.text, "Invalid WebOps.init_zero function");
   deepEqual(grid_2, result.color, "Invalid WebOps.init_zero function");
   deepEqual(grid_3, result.names, "Invalid WebOps.init_zero function");

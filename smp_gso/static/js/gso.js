@@ -47,13 +47,7 @@ var vNames;
 			gridText = result.text;
 			gridColor = result.color;
 			vNames = result.names;
-			//gridText = GSO.MatrixBin.O(19);
-			//gridColor = GSO.MatrixBin.O(19);
-			
-			//vNames = GSO.VecBin.new_one([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
-			
-			
-			//initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);	
+				
 			GSO_OP.WebOps.initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);
 			document.getElementById("one").value = "N";
  	        document.getElementById("two").value = "N";
@@ -62,7 +56,7 @@ var vNames;
             document.getElementById("northFalse").style.display="none";
             
             //write out gridText 
-            writeToDocOne(gridText.view());	
+            GSO_OP.WebOps.writeToDocOne(gridText.view());	
             //writeToDocOne(scan_upper_for_ones());	
             
             /* 
@@ -73,10 +67,10 @@ var vNames;
 					
  	
     }
-   
+   /*
 	function writeToDocOne(message) {
     		document.getElementById("test_out").innerHTML = message;
-    }    
+    }*/    
     
  //################################################################################################
  //################################################################################################
@@ -145,7 +139,7 @@ var vNames;
  		
  		
  	}
- 	writeToDocOne("Just hit the enter data button");	
+ 	GSO_OP.WebOps.writeToDocOne("Just hit the enter data button");	
  	//writeToDocOne();	
  }	
  
