@@ -140,7 +140,7 @@ var vNames;
  //
  //################################################################################################
  //################################################################################################
- 
+ /*
  function noSwapRC() {
  	document.getElementById("one").value = "N";
  	document.getElementById("two").value = "N";
@@ -150,12 +150,12 @@ var vNames;
     document.getElementById("processButton").style.display="inline";
     document.getElementById("inferenceButton").style.display="inline";
 
- }
+ }; */
  
  function processData() {
  	document.getElementById("moveData").style.display="inline";
  
- }
+ };
  
  //################################################################################################
  //################################################################################################

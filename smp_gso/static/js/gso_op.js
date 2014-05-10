@@ -171,6 +171,13 @@ GSO_OP.WebOps.writeToDocOne = function(message) {
     		document.getElementById("test_out").innerHTML = message;
 };
 
+//################################################################################################
+//################################################################################################
+//#####
+//#####        Functions to enter data into the grid. Enter Data Button
+//#####
+//################################################################################################
+//################################################################################################
 
 GSO_OP.WebOps.enterData =  function() {
  	var rcOne = document.getElementById("one").value;
@@ -236,6 +243,25 @@ GSO_OP.WebOps.enterData =  function() {
  	
  };	
      
+ //#######################################################################################
+ //#######################################################################################
+ //#####
+ //#####   Function to handle the case when "Green In Lower Section" 
+ //#####   Assigned to the "Green In Lower Section" Button.
+ //#####
+ //#######################################################################################
+ //#######################################################################################
+ 
+ GSO_OP.WebOps.noSwapRC = function(){
+ 	document.getElementById("one").value = "N";
+ 	document.getElementById("two").value = "N";
+ 	document.getElementById("northTrue").style.display="none";
+    document.getElementById("northFalse").style.display="none";
+    document.getElementById("entryButton").style.display="inline";
+    document.getElementById("processButton").style.display="inline";
+    document.getElementById("inferenceButton").style.display="inline";
+
+ };
  
 
  	
