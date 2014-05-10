@@ -263,8 +263,21 @@ GSO_OP.WebOps.enterData =  function() {
 
  };
  
+ //#######################################################################################
+ //#######################################################################################
+ //#####
+ //#####   Function to handle the case when a green cell is in the upper  
+ //#####   area after a swap.  Displays the Move text input fields and
+ //#####   "Move City Data" button.
+ //#####
+ //#######################################################################################
+ //#######################################################################################
 
- 	
+ GSO_OP.WebOps.processData = function() {
+ 	document.getElementById("moveData").style.display="inline";
+ 
+ };
+  	
 
  	
  

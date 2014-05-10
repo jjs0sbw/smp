@@ -151,11 +151,11 @@ var vNames;
     document.getElementById("inferenceButton").style.display="inline";
 
  }; */
- 
+ /*
  function processData() {
  	document.getElementById("moveData").style.display="inline";
  
- };
+ }; */
  
  //################################################################################################
  //################################################################################################
