@@ -287,6 +287,7 @@ GSO_OP.WebOps.enterData =  function() {
  //
  //#######################################################################################
  //#######################################################################################
+ 
  GSO_OP.WebOps.inferenceProcess = function() {
  	var cellSize = 20; // should be in global function variable
  	var canvas = document.getElementById("SSO_1"); 	
@@ -317,7 +318,7 @@ GSO_OP.WebOps.enterData =  function() {
 	tempId = GSO.MatrixBin.Id(19);
 	rMatrix = tempGridText.add(tempId);
 	
-	reachabilityMatrix(rMatrix);
+	GSO_OP.WebOps.reachabilityMatrix(rMatrix);
 	
 	//############## draw code here ########
     // need to redraw the main canvas using text values
@@ -351,5 +352,69 @@ GSO_OP.WebOps.enterData =  function() {
 	
  };
  	
+ //#######################################################################################
+ //#######################################################################################
+ //#####
+ //#####   Function create a reachability matrix
+ //#####   Needs a input matrix
+ //#####
+ //#######################################################################################
+ //#######################################################################################
+ 
+ GSO_OP.WebOps.reachabilityMatrix = function(matrixIn) {
+ 	var rmOne;
+ 	var rmTwo;
+ 	var rmOut_1;
+ 	var rmOut_2;
+ 	var rmDiff_1;
+ 	var rmDiff_2;
+ 	var colorInferred;
+ 	var textInferred;
+ 	var tempGridColor;
+ 	var tempGridText;
+ 	var done = new Boolean(0);
+ 	var loopFlag = 25;
+ 	var ri;
+ 	var rx;
+ 	var matrix_sum;
+ 
+ // start utility function here
+	rmOne = matrixIn.dup();
+	rmTwo = matrixIn.dup();
+	rmOut_1 = rmOne.boolMultiply(rmTwo);
+	rmOut_2 = rmOut_1.boolMultiply(rmTwo);
+	tempGridColor = gridColor.dup();
+	tempGridText = gridText.dup();
+	
+	// start a loop to calculate the reachability matrix
+	while((!done) && (loopFlag > 0)) {
+		rmDiff_1 = rmOut_2.subtract(rmOut_1);
+		//check to see if sum of rmDiff_1 is equal to zero
+		// if not boolMultiply rmOut_2 by rmTwo
+		// continue the boolMultiply until sum of rmDiff_1 is zero
+		matrix_sum = rmOut_2.subtract(rmOut_1);
+		if(matrix_sum === 0) {
+			done = new Boolean(1);
+			loopFlag = 0;
+		}else {
+			rmOut_1 = rmOut_2;
+			rmOut_2 = rmOut_2.boolMultiply(rmTwo);
+		};
+	
+		loopFlag = loopFlag - 1;
+	};
+
+	rmDiff_2 = rmOut_2.subtract(rmOne);
+	
+	colorInferred = rmDiff_2.map(function(rx){if(rx >= 1){return 4;}else{return 0;}});
+    textInferred = rmDiff_2.map(function(rx){if(rx >= 1){return 1;}else{return 0;}});
+    
+    tempGridColor = tempGridColor.add(colorInferred);
+    tempGridText =tempGridText.add(textInferred);
+    
+    gridColor = tempGridColor;
+	gridText = tempGridText;
+    // end utility function here....
+ };
  
    

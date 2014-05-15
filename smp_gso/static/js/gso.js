@@ -61,7 +61,7 @@ var vNames;
 
     };
     
- 
+ /*
  function reachabilityMatrix(matrixIn) {
  	var rmOne;
  	var rmTwo;
@@ -100,10 +100,10 @@ var vNames;
 		}else {
 			rmOut_1 = rmOut_2;
 			rmOut_2 = rmOut_2.boolMultiply(rmTwo);
-		}
+		};
 	
 		loopFlag = loopFlag - 1;
-	}
+	};
 
 	rmDiff_2 = rmOut_2.subtract(rmOne);
 	
@@ -116,7 +116,7 @@ var vNames;
     gridColor = tempGridColor;
 	gridText = tempGridText;
     // end utility function here....
- }
+ }; */
  
  //#######################################################################################
  //#######################################################################################
