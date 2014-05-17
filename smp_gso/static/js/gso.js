@@ -62,7 +62,7 @@ var vNames;
     };
     
 
- 
+ /*
  //#######################################################################################
  //#######################################################################################
  //
@@ -159,16 +159,16 @@ var vNames;
             		case 5:
             			drawLightBlueCell(mx, my, canvas, context, cellSize); // code not used
             			break;		
-            	}
+            	};
             	
             	GSO_OP.WebOps.drawText(mx, my, canvas, context, cellSize, gridText);   		
-        }	
- 	}
+        };	
+ 	};
         
 	//############# draw code end ###########
 	
  	document.getElementById("moveData").style.display="none";
- }
+ }; */
  
  
  //################################################################################################
