@@ -61,115 +61,6 @@ var vNames;
 
     };
     
-
- /*
- //#######################################################################################
- //#######################################################################################
- //
- //   Now build a function to swap the selected row and column pairs
- //   That are existing data in the grid (move city data )
- //
- //#######################################################################################
- //#######################################################################################
- 
- function moveRC() {
- 	var cellSize = 20; 
- 	var moveOne = document.getElementById("moveOne").value;
- 	var moveTwo = document.getElementById("moveTwo").value;
- 	var canvas = document.getElementById("SSO_1"); 	
-	var context = canvas.getContext("2d");
-	var canvas_1 = document.getElementById("SSO_2");
-	var context_1 = canvas_1.getContext("2d");
-	var canvas_2 = document.getElementById("SSO_3");
-	var context_2 = canvas_2.getContext("2d");
-	
-	var tempRowOneColor;
-	var tempRowTwoColor;
-	var tempRowOneText;
-	var tempRowTwoText;
-	
-	var tempColOneColor;
-	var tempColTwoColor;
-	var tempColOneText;
-	var tempColTwoText;
-	
-	var tempGridColor;
-	var tempGridText;
-	var mx;
-	var my;
-	var mi;
-	var moveOneIndex;
-	var moveTwoIndex;
-	
-	
-	tempGridColor = gridColor.dup(); 
-	tempGridText = gridText.dup(); 
-	
-	
-	moveOneIndex = vNames.indexOf(moveOne);
-	moveTwoIndex = vNames.indexOf(moveTwo);
-	
-	vNames.setE(moveTwoIndex, moveOne); 
-	vNames.setE(moveOneIndex, moveTwo); 
-
-	tempRowOneColor = gridColor.row(moveOneIndex);
-	tempRowTwoColor = gridColor.row(moveTwoIndex);
-	tempRowOneText = gridText.row(moveOneIndex);
-	tempRowTwoText = gridText.row(moveTwoIndex);
-	
-	tempGridColor.setRow(moveTwoIndex, tempRowOneColor);
-	tempGridColor.setRow(moveOneIndex, tempRowTwoColor);
-	tempGridText.setRow(moveTwoIndex, tempRowOneText);
-	tempGridText.setRow(moveOneIndex, tempRowTwoText);
-	
-	tempColOneColor = tempGridColor.col(moveOneIndex);
-	tempColTwoColor = tempGridColor.col(moveTwoIndex);
-	tempColOneText  = tempGridText.col(moveOneIndex);
-	tempColTwoText  = tempGridText.col(moveTwoIndex);
-	
-	tempGridColor.setCol(moveTwoIndex, tempColOneColor);
-	tempGridColor.setCol(moveOneIndex, tempColTwoColor);
-	tempGridText.setCol(moveTwoIndex, tempColOneText);
-	tempGridText.setCol(moveOneIndex, tempColTwoText);
-	
-	gridColor = tempGridColor;
-	gridText = tempGridText;
-	
-	//############## draw code here ########
-    // need to redraw the main canvas using text values
- 	// use the gridColor matrix
- 	for (mx = 0; mx < 19 ; mx++) { 
- 	    var color;
- 		GSO_OP.WebOps.drawXGridCell(mx+1, canvas_1, context_1, cellSize, vNames); //added +1
-        for (my = 0; my < 19; my++) { 
-        		GSO_OP.WebOps.drawYGridCell(my+1, canvas_2, context_2, cellSize, vNames); //added +1
-            	color = gridColor.e(mx+1,my+1);
-            	switch(color)
-            	{
-            		case 1:
-            			GSO_OP.WebOps.drawYellowCell(mx, my, canvas, context, cellSize); 
-            			break;
-            		case 2:
-            			GSO_OP.WebOps.drawRedCell(mx, my, canvas, context, cellSize);
-            			//alert ("Drawing red cell in the box swap function");
-            			break;
-            		case 3:
-            			GSO_OP.WebOps.drawGreenCell(mx, my, canvas, context, cellSize);
-            			break;
-            		case 5:
-            			drawLightBlueCell(mx, my, canvas, context, cellSize); // code not used
-            			break;		
-            	};
-            	
-            	GSO_OP.WebOps.drawText(mx, my, canvas, context, cellSize, gridText);   		
-        };	
- 	};
-        
-	//############# draw code end ###########
-	
- 	document.getElementById("moveData").style.display="none";
- }; */
- 
  
  //################################################################################################
  //################################################################################################
@@ -264,11 +155,11 @@ var vNames;
             			drawLightBlueCell(sx, sy, canvas, context, cellSize); // code not used
             			break;	
             			
-            	}
+            	};
             	
             	GSO_OP.WebOps.drawText(sx, sy, canvas, context, cellSize, gridText);  	
-        }	
- 	}
+        };	
+ 	};
         
 	
 	
@@ -281,7 +172,7 @@ var vNames;
     document.getElementById("entryButton").style.display="inline";
     document.getElementById("processButton").style.display="inline";
     document.getElementById("inferenceButton").style.display="inline";
- }
+ };
  
  //################################################################################################
  //################################################################################################
@@ -315,11 +206,11 @@ var vNames;
      	for(var j = 0; j <= i; j++) {
      		value = gridText.elements[j,i]; // swap i,j
      		sum = parseInt(sum) + parseInt(value);
-     	}
+     	};
       
-    }
+    };
  
      return sum;
      
      
- }    
+ };    
