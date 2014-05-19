@@ -61,13 +61,12 @@ var vNames;
 
     };
     
- 
+ /*
  //################################################################################################
  //################################################################################################
  //
  //   Now build a function to swap the selected row and column pairs
- //   That are entered for the first time in the grid.. (modify swapRC()
- //   based on the approach in moveRC()
+ //   That are entered for the first time in the grid.
  //
  //################################################################################################
  //################################################################################################
@@ -172,7 +171,7 @@ var vNames;
     document.getElementById("entryButton").style.display="inline";
     document.getElementById("processButton").style.display="inline";
     document.getElementById("inferenceButton").style.display="inline";
- };
+ }; */
  
  //################################################################################################
  //################################################################################################

@@ -524,4 +524,113 @@ GSO_OP.WebOps.enterData =  function() {
  	document.getElementById("moveData").style.display="none";
  };
  
-   
+ //################################################################################################
+ //################################################################################################
+ //
+ //   Now build a function to swap the selected row and column pairs
+ //   That are entered for the first time in the grid.
+ //
+ //################################################################################################
+ //################################################################################################
+ GSO_OP.WebOps.swapRC = function() {
+ 	var cellSize = 20; // should be in global function variable
+ 	var rcOne = document.getElementById("one").value;
+ 	var rcTwo = document.getElementById("two").value;
+ 	var canvas = document.getElementById("SSO_1"); 	
+	var context = canvas.getContext("2d");
+	var canvas_1 = document.getElementById("SSO_2");
+	var context_1 = canvas_1.getContext("2d");
+	var canvas_2 = document.getElementById("SSO_3");
+	var context_2 = canvas_2.getContext("2d");
+	
+	
+	var tempRCOneIndex;
+	var tempRCTwoIndex;
+	var tempGridColorSwap; 
+	var tempGridTextSwap; 
+	var tempRowOneColorSwap; 
+	var tempRowTwoColorSwap; 
+	var tempRowOneTextSwap; 
+	var tempRowTwoTextSwap; 
+	var tempColOneColorSwap; 
+	var tempColTwoColorSwap; 
+	var tempColOneTextSwap; 
+	var tempColTwoTextSwap; 
+	var si; 
+	var sx; 
+	var sy; 
+	
+	tempRCOneIndex = vNames.indexOf(rcOne); 
+	tempRCTwoIndex = vNames.indexOf(rcTwo); 
+	
+	tempGridColorSwap = gridColor.dup(); 
+	tempGridTextSwap = gridText.dup();  
+	
+	vNames.setE(tempRCTwoIndex, rcOne); 
+	vNames.setE(tempRCOneIndex, rcTwo); 
+	
+	tempRowOneColorSwap = gridColor.row(tempRCOneIndex);
+	tempRowTwoColorSwap = gridColor.row(tempRCTwoIndex);
+	tempRowOneTextSwap = gridText.row(tempRCOneIndex);
+	tempRowTwoTextSwap = gridText.row(tempRCTwoIndex);
+	
+	tempGridColorSwap.setRow(tempRCTwoIndex, tempRowOneColorSwap);
+	tempGridColorSwap.setRow(tempRCOneIndex, tempRowTwoColorSwap);
+	tempGridTextSwap.setRow(tempRCTwoIndex, tempRowOneTextSwap);
+	tempGridTextSwap.setRow(tempRCOneIndex, tempRowTwoTextSwap);
+	
+	tempColOneColorSwap = tempGridColorSwap.col(tempRCOneIndex);
+	tempColTwoColorSwap = tempGridColorSwap.col(tempRCTwoIndex);
+	tempColOneTextSwap  = tempGridTextSwap.col(tempRCOneIndex);
+	tempColTwoTextSwap  = tempGridTextSwap.col(tempRCTwoIndex);
+	
+	tempGridColorSwap.setCol(tempRCTwoIndex, tempColOneColorSwap);
+	tempGridColorSwap.setCol(tempRCOneIndex, tempColTwoColorSwap);
+	tempGridTextSwap.setCol(tempRCTwoIndex, tempColOneTextSwap);
+	tempGridTextSwap.setCol(tempRCOneIndex, tempColTwoTextSwap);
+	
+	gridColor = tempGridColorSwap;
+	gridText = tempGridTextSwap;
+	
+	//############## draw code here ########
+    // need to redraw the main canvas using text values
+ 	for (sx = 0; sx < 19 ; sx++) { 
+ 	    var color;
+ 		GSO_OP.WebOps.drawXGridCell(sx+1, canvas_1, context_1, cellSize, vNames); // added +1
+        for (sy = 0; sy < 19; sy++) { 
+        		GSO_OP.WebOps.drawYGridCell(sy+1, canvas_2, context_2, cellSize, vNames); // added +1
+            	color = gridColor.e(sx+1,sy+1);
+            	switch(color)
+            	{
+            		case 1:
+            			GSO_OP.WebOps.drawYellowCell(sx, sy, canvas, context, cellSize); 
+            			break;
+            		case 2:
+            			GSO_OP.WebOps.drawRedCell(sx, sy, canvas, context, cellSize);
+            			//alert ("Drawing red cell in the box swap function");
+            			break;
+            		case 3:
+            			GSO_OP.WebOps.drawGreenCell(sx, sy, canvas, context, cellSize);
+            			break;
+            		case 5:
+            			drawLightBlueCell(sx, sy, canvas, context, cellSize); // code not used
+            			break;	
+            			
+            	};
+            	
+            	GSO_OP.WebOps.drawText(sx, sy, canvas, context, cellSize, gridText);  	
+        };	
+ 	};
+        
+	
+	
+	//############# draw code end ###########
+	
+	document.getElementById("one").value = "N";
+ 	document.getElementById("two").value = "N";
+ 	document.getElementById("northTrue").style.display="none";
+    document.getElementById("northFalse").style.display="none";
+    document.getElementById("entryButton").style.display="inline";
+    document.getElementById("processButton").style.display="inline";
+    document.getElementById("inferenceButton").style.display="inline";
+ };   
