@@ -659,7 +659,7 @@ GSO_OP.WebOps.enterData =  function() {
  // If the sum of the adding operation is greater than zero (0) return false.
  // If the sum of the adding operation is equal to zero (0) return true
  
- function scan_upper_for_ones() {
+ GSO_OP.WebOps.scanUpperForOnes = function() {
      var num = 19;
      var sum = 0;
      var value = 0;
