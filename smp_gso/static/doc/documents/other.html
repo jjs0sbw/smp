@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset=”utf-8”>
+        <title>Contact -  GSO Web App </title>
+        <meta name=”description” content=”Contact details for the GSO Web Application”>
+        <meta name=”author” content=”Joseph J. Simpson”>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/structural_modeling_grid.css" rel="stylesheet">
+</head>
+<body>
+  <div class="menu_bar">
+	<p>The General Subordination Ordering web application is an application of structural<br>
+	 modeling. This document contains development goals, objectives and notes. It is 
+	 intended to be a repository of design information that may be used to gain insight
+	 into the web application architecture. <br></p>
+	<p>The primary difference between the strict subordination ordering web application 
+	and the general subordination ordering web application is the fact that more than one
+	city may occupy the a given level in the general subordination ordering application.<br></p>
+	<p>This primary difference imposes some new functional requirements on the general 
+	subordination ordering application.  These new functional requirements are:<br></p>
+	<ul>
+		<li>FR(1) - The ability to indicate that two or more cities are at the same level.</li>
+		<li>FR(2) - The ability to swap a group of cities that are all at the same level.</li>
+		<li>FR(3) - The ability to set a default level indicator.</li>
+		<li>FR(4) - The ability to select a default solution strategy.</li>
+	</ul>
+	<p>The FR(1) requirement defines a need to gather addition information.  In the 
+	strict subordination ordering application the only question that was asked was 
+	"Is city a north-of city b." If the answer was no, then it was clear that city b was
+	north-of city a.  In the general subordination ordering application there is another 
+	possibility, the cities could be at the same level. In the general subordination
+	ordering application, if city a in not north-of city b then the question "Are the 
+	cities at the same level", must be asked.  The answer to these two questions will
+	completely define the the state of the general subordination ordering between these
+	two cities. </p>
+  </div>
+</body>
+</html>
