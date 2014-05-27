@@ -1,0 +1,4 @@
+﻿Application Design Notes
+General Subordination Ordering Application
+
+Key Design Issues:
