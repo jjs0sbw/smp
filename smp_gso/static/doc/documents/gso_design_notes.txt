@@ -2,3 +2,20 @@
 General Subordination Ordering Application
 
 Key Design Issues:
+New functional requirements:
+-- FR(1) The ability to indicate that two or more cities are at the same level.
+-- FR(2) The ability to swap a group of cities that are all at the same level.
+-- FR(3) The ability to set a default level indicator.
+-- FR(4) The ability to select a default solution strategy.
+
+Functional Requirement One:
+The new FR(1) functional requirement indicates a need to gather additional information.
+In the strict subordination ordering (SSO) application the only question that was asked
+was "is city a north-of city b."  If the answer was no, then it was clear that city b was
+was north-of city a.  In the general subornation ordering application there is another
+possibility, the cities could be at the same level.  In the general subornation ordering
+application, if city a in not north-of city b the question "Are the cities at the same
+level?", must be asked.  The answer to these two questions will completely define the 
+state of the general subordination ordering between these two cities.
+
+
