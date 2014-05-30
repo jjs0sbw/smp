@@ -21,4 +21,6 @@ state of the general subordination ordering between these two cities.
 A new text box will need to be added to the usher interface to indicate if the cities 
 are at the same level.
 
+A new analysis approach will need to be developed to “swap a set of cities” that are all at the same level with a city that is at another level.
+
 
