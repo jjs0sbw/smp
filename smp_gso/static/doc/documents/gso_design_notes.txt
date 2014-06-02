@@ -27,8 +27,10 @@ at the same level with a city that is at another level.
 A new check box is needed to to indicate that the default “same level” setting is “no:
 the cities are not at the same level.”
 
-There are at least two different types of solution stategies:
+There are at least two different types of solution strategies:
 - start with the first and second rows and work your way down
 - select random cities to compare at first.. then work down 
+
+These techniques will be documented as they are developed.
 
 
