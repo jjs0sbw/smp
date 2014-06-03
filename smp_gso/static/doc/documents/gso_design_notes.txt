@@ -31,6 +31,8 @@ There are at least two different types of solution strategies:
 - start with the first and second rows and work your way down
 - select random cities to compare at first.. then work down 
 
-These techniques will be documented as they are developed.
+These techniques will be documented as they are developed. 
+
+The general development approach is:
 
 
