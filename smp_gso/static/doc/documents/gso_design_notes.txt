@@ -34,5 +34,6 @@ There are at least two different types of solution strategies:
 These techniques will be documented as they are developed. 
 
 The general development approach is:
+— Create the new GUI elements 
 
 
