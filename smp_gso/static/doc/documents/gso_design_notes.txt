@@ -36,5 +36,7 @@ These techniques will be documented as they are developed.
 The general development approach is:
 — Create the new GUI elements 
 - Create new functions, including:
+—— Scan upper triangular area for ones
+
 
 
