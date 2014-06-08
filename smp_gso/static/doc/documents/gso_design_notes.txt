@@ -38,6 +38,9 @@ The general development approach is:
 - Create new functions, including:
 —— Scan upper triangular area for ones
 —— Move more than one element at a time
+—— Check for grouped elements
+
+
 
 
 
