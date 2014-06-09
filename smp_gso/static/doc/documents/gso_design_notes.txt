@@ -39,6 +39,7 @@ The general development approach is:
 —— Scan upper triangular area for ones
 —— Move more than one element at a time
 —— Check for grouped elements
+- Create a test driven design approach
 
 
 
