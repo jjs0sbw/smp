@@ -40,6 +40,7 @@ The general development approach is:
 —— Move more than one element at a time
 —— Check for grouped elements
 - Create a test driven design approach
+- Add new features 
 
 
 
