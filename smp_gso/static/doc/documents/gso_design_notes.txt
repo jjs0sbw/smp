@@ -41,6 +41,7 @@ The general development approach is:
 —— Check for grouped elements
 - Create a test driven design approach
 - Add new features 
+- Test new features
 
 
 
