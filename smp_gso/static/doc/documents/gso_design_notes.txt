@@ -42,6 +42,7 @@ The general development approach is:
 - Create a test driven design approach
 - Add new features 
 - Test new features
+- Create a set of functional approaches
 
 
 
