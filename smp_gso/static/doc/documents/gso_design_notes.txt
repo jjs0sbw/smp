@@ -44,7 +44,7 @@ The general development approach is:
 - Test new features
 - Create a set of functional approaches
 - Evaluate each functional approach 
-
+- Select best approach
 
 
 
