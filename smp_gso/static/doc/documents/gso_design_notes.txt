@@ -46,6 +46,8 @@ The general development approach is:
 - Evaluate each functional approach 
 - Select best approach
 
-
+The general subordination ordering can have a mix of ordering out comes. These outcomes
+range from the case where all elements are at the same level to the case where each 
+element is on a level by itself.
 
 
