@@ -69,6 +69,28 @@ operation will need to be developed.  If the collected empirical data is associa
 with two cities, each of which is a member of different city groups at different levels
 in the city matrix, then yet another new inference method will need to be developed.
 
+There are four standard cases in the general subordination ordering approach.  These 
+cases are:
+— Each city on a level by itself
+— All cities at the same level
+— A group of cities at one level and singe cities on other levels
+— Groups of cities at each level
+
+The inference operations for these four cases will need to be developed.  
+The case where we have each city on its own level has already been developed.
+The case where all cities are at the same level will not have an inference
+operation because no inference is possible with all cities at the same level.
+The case where there are groups of cities and single cities needs needs a new 
+inference method developed.  The case where there are groups of cities at each 
+level needs to have a new inference method developed.
+
+
+
+
+
+
+
+
 
 
 
