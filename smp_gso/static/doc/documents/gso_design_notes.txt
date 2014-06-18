@@ -84,7 +84,35 @@ The case where there are groups of cities and single cities needs needs a new
 inference method developed.  The case where there are groups of cities at each 
 level needs to have a new inference method developed.
 
+The first development activity will be focused on supporting the case where all
+cities are at the same level.  The first step is to create a Sage Math notebook
+that creates the known system configuration.  This configuration will be used 
+to support testing of the GSO web application. The configuration will be very simple
+as all the cities will be at the same level.  The matrix will be filled with all
+zeros, but the background color will change from yellow to red as empirical
+information is gathered to show that the cities are at the same level.  
+This configuration can be completely ordered using a number of empirical 
+information events that is equal to the number of cities.  Should work out very fast.
 
+The second development activity will be focused on supporting the case where there
+is one city at one level and a group of cities at the other level.  A Sage Math
+notebook will need to be developed to create the known system configuration.  The 
+known configuration will be used to support testing the GSO web application.  This
+system configuration will be more challenging than the fist two configurations.  A
+general approach will need to be developed and tested using the Sage Math tool before
+the Javascript code is written.
+
+The third development activity will focus on supporting the case where there are a 
+group of cities at different levels.  A Sage Math notebook will need to be prepared 
+to create a known system configuration to support GSO system testing.  A Sage Math
+notebook will be developed to explore solutions to this problem before the Javascript
+code is written.
+
+The fourth development activity will focus on integrating all of the previous mentioned 
+cases into a general solution.  A Sage Math notebook will be prepared to create a 
+known system configuration to support testing of the GSO system. A Sage Math notebook
+will be developed to explore solutions to this type of problem before the Javascript
+code is written.
 
 
 
