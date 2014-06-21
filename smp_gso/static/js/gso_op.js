@@ -182,6 +182,7 @@ GSO_OP.WebOps.writeToDocOne = function(message) {
 GSO_OP.WebOps.enterData =  function() {
  	var rcOne = document.getElementById("one").value;
  	var rcTwo = document.getElementById("two").value;
+ 	var rcSame = document.getElementById("same").value
  	var canvas = document.getElementById("SSO_1"); 	
 	var context = canvas.getContext("2d");
 	var cellSize = 20;
@@ -200,12 +201,29 @@ GSO_OP.WebOps.enterData =  function() {
  		alert ("Please enter a value from 1 to 19 in each box");
  	} else if (rcOneIndex === rcTwoIndex){ 
  		alert ("Please enter two different values.. values can not be the same.");
+ 	} else if (!(rcSame === "N" || rcSame === "Y")) {
+ 		alert ("Please enter N for no or Y for yes.");
  	} else {
- 		// need to select the correct index of the input values
- 		gridText.setE(rcOneIndex, rcTwoIndex, 1); 
- 		gridText.setE(rcTwoIndex, rcOneIndex, 0); 
- 		GSO_OP.WebOps.enterRedColor(rcTwoIndex-1, rcOneIndex-1); 
- 		GSO_OP.WebOps.enterGreenColor(rcOneIndex-1, rcTwoIndex-1); 
+ 		// need to select the correct index of the input value
+ 		if (rcSame === "N") {
+ 			gridText.setE(rcOneIndex, rcTwoIndex, 1); 
+ 			gridText.setE(rcTwoIndex, rcOneIndex, 0); 
+ 		} else if (rcSame === "Y") {
+ 			gridText.setE(rcOneIndex, rcTwoIndex, 0); 
+ 			gridText.setE(rcTwoIndex, rcOneIndex, 0); 
+ 		} else {
+ 			alert ("Should not get here .. input error in Same Level");
+ 		}
+ 		
+ 		if (rcSame === "N") {
+ 			GSO_OP.WebOps.enterRedColor(rcTwoIndex-1, rcOneIndex-1); 
+ 			GSO_OP.WebOps.enterGreenColor(rcOneIndex-1, rcTwoIndex-1); 
+ 		} else if (rcSame === "Y") {
+ 			GSO_OP.WebOps.enterRedColor(rcTwoIndex-1, rcOneIndex-1); 
+ 			GSO_OP.WebOps.enterRedColor(rcOneIndex-1, rcTwoIndex-1); 
+ 		} else {
+ 			alert ("Should not get here .. input error in Same Level");
+ 		}
  		
  		// need to redraw the main canvas using text values
  		// use the gridColor matrix
@@ -231,11 +249,21 @@ GSO_OP.WebOps.enterData =  function() {
             	GSO_OP.WebOps.drawText(ex, ey, canvas, context, cellSize, gridText);       
         	}; 
  		};
- 		document.getElementById("northTrue").style.display="inline";
- 		document.getElementById("northFalse").style.display="inline";
- 		document.getElementById("entryButton").style.display="none";
-        document.getElementById("processButton").style.display="none";
-        document.getElementById("inferenceButton").style.display="none";
+ 		if (rcSame === "N") {
+ 			document.getElementById("northTrue").style.display="inline";
+ 			document.getElementById("northFalse").style.display="inline";
+ 			document.getElementById("entryButton").style.display="none";
+        	document.getElementById("processButton").style.display="none";
+        	document.getElementById("inferenceButton").style.display="none";
+        } else if (rcSame === "Y") {
+        	document.getElementById("northTrue").style.display="none";
+ 			document.getElementById("northFalse").style.display="none";
+ 			document.getElementById("entryButton").style.display="inline";
+        	document.getElementById("processButton").style.display="inline";
+        	document.getElementById("inferenceButton").style.display="inline";
+        } else {
+ 			alert ("Should not get here .. input error in Same Level");
+ 		}
  		
  		
  	};

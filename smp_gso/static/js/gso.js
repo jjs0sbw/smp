@@ -23,6 +23,7 @@ var vNames;
  window.onload = function() {
                     document.getElementById("one").value = "N";
  	                document.getElementById("two").value = "N";
+ 	                document.getElementById("same").value = "N"
  					document.getElementById("northTrue").style.display="none";
  					document.getElementById("northFalse").style.display="none";
  					document.getElementById("moveData").style.display="none";
@@ -51,6 +52,7 @@ var vNames;
 			GSO_OP.WebOps.initGrid(canvas, context, canvas_1, context_1, canvas_2, context_2, gridText, vNames);
 			document.getElementById("one").value = "N";
  	        document.getElementById("two").value = "N";
+ 	        document.getElementById("same").value = "N";
 			document.getElementById("moveData").style.display="none";
 			document.getElementById("northTrue").style.display="none";
             document.getElementById("northFalse").style.display="none";
