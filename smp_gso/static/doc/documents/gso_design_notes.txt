@@ -93,7 +93,10 @@ zeros, but the background color will change from yellow to red as empirical
 information is gathered to show that the cities are at the same level.  
 This configuration can be completely determined using a number of empirical 
 information events that is equal to the number of cities.  Should work out very fast.
-The Sage Math notebook code should be very simple in this case.
+The Sage Math notebook code should be very simple in this case.  The Javascript 
+code will take longer as the background colors need to be properly addressed.
+The web application needs to have two basic arrays added: an array of known
+city associations and an array of unknown associations.
 
 The second development activity will be focused on supporting the case where there
 is one city at one level and a group of cities at the other level.  A Sage Math
