@@ -34,7 +34,7 @@ There are at least two different types of solution strategies:
 These techniques will be documented as they are developed. 
 
 The general development approach is:
-— Create the new GUI elements 
+— Create the new GUI elements [added same level check box]
 - Create new functions, including:
 —— Scan upper triangular area for ones
 —— Move more than one element at a time
@@ -96,7 +96,10 @@ information events that is equal to the number of cities.  Should work out very 
 The Sage Math notebook code should be very simple in this case.  The Javascript 
 code will take longer as the background colors need to be properly addressed.
 The web application needs to have two basic arrays added: an array of known
-city associations and an array of unknown associations.
+city associations and an array of unknown associations. The current plan is to 
+create an array of arrays with the initial unknown array populated with each 
+individual city in a single cell array.  The initial known city array will be 
+empty.
 
 The second development activity will be focused on supporting the case where there
 is one city at one level and a group of cities at the other level.  A Sage Math
