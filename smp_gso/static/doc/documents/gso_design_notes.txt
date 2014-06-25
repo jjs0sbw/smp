@@ -100,7 +100,8 @@ city associations and an array of unknown associations. The current plan is to
 create an array of arrays with the initial unknown array populated with each 
 individual city in a single cell array.  The initial known city array will be 
 empty.  As empirical data is collected of each city pair, the cities are 
-transferred from the unknown array to the known array.
+transferred from the unknown array to the known array.  Need to write a set of 
+function to process and manage the known and unknown array contents.
 
 The second development activity will be focused on supporting the case where there
 is one city at one level and a group of cities at the other level.  A Sage Math
