@@ -109,7 +109,8 @@ notebook will need to be developed to create the known system configuration.  Th
 known configuration will be used to support testing the GSO web application.  This
 system configuration will be more challenging than the fist two configurations.  A
 general approach will need to be developed and tested using the Sage Math tool before
-the Javascript code is written.
+the Javascript code is written. The concept of an array of known and unknown cities
+will also be used in this effort.
 
 The third development activity will focus on supporting the case where there are a 
 group of cities at different levels.  A Sage Math notebook will need to be prepared 
