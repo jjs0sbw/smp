@@ -37,6 +37,7 @@ The general development approach is:
 — Create the new GUI elements [added same level check box]
 - Create new functions, including:
 —— Scan upper triangular area for ones
+—- Create a known and unknown city array elements
 —— Move more than one element at a time
 —— Check for grouped elements
 - Create a test driven design approach
@@ -110,7 +111,7 @@ known configuration will be used to support testing the GSO web application.  Th
 system configuration will be more challenging than the fist two configurations.  A
 general approach will need to be developed and tested using the Sage Math tool before
 the Javascript code is written. The concept of an array of known and unknown cities
-will also be used in this effort.
+will also be used in this effort. 
 
 The third development activity will focus on supporting the case where there are a 
 group of cities at different levels.  A Sage Math notebook will need to be prepared 
