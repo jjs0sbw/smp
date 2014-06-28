@@ -40,6 +40,7 @@ The general development approach is:
 —- Create a known and unknown city array elements
 —— Move more than one element at a time
 —— Check for grouped elements
+—— Add and remove elements from the known and unknown city arrays
 - Create a test driven design approach
 - Add new features 
 - Test new features
