@@ -127,7 +127,7 @@ will be developed to explore solutions to this type of problem before the Javasc
 code is written.
 
 
-
+Explore using jQuery and html markup to present the graphical grid.
 
 
 
