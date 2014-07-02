@@ -131,6 +131,8 @@ Explore using jQuery and html markup to present the graphical grid.
 Design a new application architectural outline and approach, to include:
 — New graphical presentation
 — Table based html grid
+— Object based code that supports new approach
+
 
 
 
