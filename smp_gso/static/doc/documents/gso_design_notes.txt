@@ -133,7 +133,9 @@ Design a new application architectural outline and approach, to include:
 — Table based html grid
 — Object based code that supports the new approach
 — Clear object api interfaces 
-— Create a test driven appraoch 
+— Create a test driven approach
+— Explore a continuous integration approach
+
 
 
 
