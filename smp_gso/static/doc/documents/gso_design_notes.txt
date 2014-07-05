@@ -135,6 +135,8 @@ Design a new application architectural outline and approach, to include:
 — Clear object api interfaces 
 — Create a test driven approach
 — Explore a continuous integration approach
+— Design new GUI interface using Bootstrap
+
 
 
 
