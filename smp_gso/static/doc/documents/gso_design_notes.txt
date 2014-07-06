@@ -137,6 +137,14 @@ Design a new application architectural outline and approach, to include:
 — Explore a continuous integration approach
 — Design new GUI interface using Bootstrap
 
+DESIGN NOTE ONE — 07-06-14
+For the general approach, the GUI needs to have a button that prepares the 
+GUI to accept cities at the same level.  The number of cities at the same 
+level can range from 2 to the total list.
+
+Need to create to lists… known cities and unknown cities. The known cities
+will be arranged in known groups of cities.
+
 
 
 
