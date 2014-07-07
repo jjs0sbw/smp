@@ -174,6 +174,37 @@ GSO_OP.WebOps.writeToDocOne = function(message) {
 //################################################################################################
 //################################################################################################
 //#####
+//#####        Function to enter same level data into the grid. Cities At Same Level Button
+//#####
+//##### 		New added 07-06-2014
+//################################################################################################
+//################################################################################################
+GSO_OP.WebOps.sameLevelDisplay =  function() {
+ 	var rcSet = document.getElementById("citySet").value;
+ 	//var rcTwo = document.getElementById("two").value;
+ 	var rcSame = "Y"
+ 	var canvas = document.getElementById("SSO_1"); 	
+	var context = canvas.getContext("2d");
+	var cellSize = 20;
+	var color = 0;
+	var rcOneIndex;
+	var rcTwoIndex;
+	var ei;
+	var ex;
+	var ey;
+	
+	document.getElementById("sameLevelEntry").style.display="inline";
+	document.getElementById("entry").style.display="none"; 
+	document.getElementById("northTrue").style.display="none";
+ 	document.getElementById("northFalse").style.display="none";
+ 	document.getElementById("entryButton").style.display="none";
+    document.getElementById("processButton").style.display="none";
+    document.getElementById("inferenceButton").style.display="none";
+};
+
+//################################################################################################
+//################################################################################################
+//#####
 //#####        Functions to enter data into the grid. Enter Data Button
 //#####
 //################################################################################################
@@ -303,6 +334,12 @@ GSO_OP.WebOps.enterData =  function() {
 
  GSO_OP.WebOps.processData = function() {
  	document.getElementById("moveData").style.display="inline";
+ 	document.getElementById("entry").style.display="none"; // added
+ 	document.getElementById("northTrue").style.display="none"; // added
+    document.getElementById("northFalse").style.display="none"; // added
+    document.getElementById("entryButton").style.display="none"; // changed to none
+    document.getElementById("processButton").style.display="none"; // changed to none
+    document.getElementById("inferenceButton").style.display="none"; // changed to none
  
  };
   	
@@ -550,6 +587,12 @@ GSO_OP.WebOps.enterData =  function() {
 	//############# draw code end ###########
 	
  	document.getElementById("moveData").style.display="none";
+ 	document.getElementById("northTrue").style.display="none"; // added
+    document.getElementById("northFalse").style.display="none"; // added
+    document.getElementById("entry").style.display="inline"; // added
+    document.getElementById("entryButton").style.display="inline"; // added
+    document.getElementById("processButton").style.display="inline"; // added
+    document.getElementById("inferenceButton").style.display="inline"; // added
  };
  
  //#######################################################################################

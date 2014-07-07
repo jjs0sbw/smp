@@ -70,7 +70,12 @@
 			<form id="initialize" name="initializeGrid">
 				<p>
 					<input type="button" id="initButton" value="Initialize City Grid">
+					<input type="button" onclick="GSO_OP.WebOps.sameLevelDisplay()" id="sameLevelButton" value="Cities At Same Level">
 				</p>
+			</form>
+			<form id="sameLevelEntry" name="enterSameLevelData">
+				Cites at same level: <input id="citySet" type="text" size=20 name="citySet" value="Empty" >
+				<input type="button" onclick="GSO_OP.WebOps.processSameLevelData()" id="sameLevelProcessButton" value="Process Data">
 			</form>
 
 			<form id="entry" name="enterGridData">

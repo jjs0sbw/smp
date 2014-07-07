@@ -24,6 +24,7 @@ var vNames;
                     document.getElementById("one").value = "N";
  	                document.getElementById("two").value = "N";
  	                document.getElementById("same").value = "N"
+ 	                document.getElementById("sameLevelEntry").style.display="none";
  					document.getElementById("northTrue").style.display="none";
  					document.getElementById("northFalse").style.display="none";
  					document.getElementById("moveData").style.display="none";
