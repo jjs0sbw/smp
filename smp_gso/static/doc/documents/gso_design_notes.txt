@@ -145,6 +145,11 @@ level can range from 2 to the total list.
 Need to create to lists… known cities and unknown cities. The known cities
 will be arranged in known groups of cities.
 
+DESIGN NOTE TWO — 07-08-14
+The graphic display needs to be made into an object.
+
+
+
 
 
 
