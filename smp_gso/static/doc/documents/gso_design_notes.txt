@@ -147,6 +147,8 @@ will be arranged in known groups of cities.
 
 DESIGN NOTE TWO — 07-08-14
 The graphic display needs to be made into an object.
+Create functions to process the graphic object.
+Need a graphic processing object for each type of graphic transform.
 
 
 
