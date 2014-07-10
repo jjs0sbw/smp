@@ -1,4 +1,4 @@
-Application Design Notes
+ Application Design Notes
 General Subordination Ordering Application
 
 Key Design Issues:
@@ -147,8 +147,11 @@ will be arranged in known groups of cities.
 
 DESIGN NOTE TWO — 07-08-14
 The graphic display needs to be made into an object.
+Need to determine the best way to create the graphic object.
+May use jQuery for the graphic object creation.
 Create functions to process the graphic object.
 Need a graphic processing object for each type of graphic transform.
+
 
 
 
