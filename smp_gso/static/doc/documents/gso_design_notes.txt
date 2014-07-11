@@ -152,6 +152,9 @@ May use jQuery for the graphic object creation.
 Create functions to process the graphic object.
 Need a graphic processing object for each type of graphic transform.
 
+DESIGN NOTE THREE -07-11-14
+Need to re-design the application structure.. 
+
 
 
 
