@@ -155,6 +155,7 @@ Need a graphic processing object for each type of graphic transform.
 DESIGN NOTE THREE -07-11-14
 Need to re-design the application structure.. 
 First make the graphic display into an object..
+Then create a set of transform functions to update the graphic object..
 
 
 
