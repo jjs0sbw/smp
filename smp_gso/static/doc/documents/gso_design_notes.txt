@@ -3,10 +3,12 @@ General Subordination Ordering Application
 
 Key Design Issues:
 New functional requirements:
--- FR(1) The ability to indicate that two or more cities are at the same level.
--- FR(2) The ability to swap a group of cities that are all at the same level.
--- FR(3) The ability to set a default level indicator.
--- FR(4) The ability to select a default solution strategy.
+- FR(1) The ability to indicate that two or more cities are at the same level.
+- FR(2) The ability to swap a group of cities that are all at the same level.
+- FR(3) The ability to set a default level indicator.
+— FR(4) The ability to select a default solution strategy.
+— FR(5) The ability to swap a group of cities and a single city.
+— FR(6) The ability to swap single cities.
 
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
