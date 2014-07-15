@@ -10,6 +10,11 @@ New functional requirements:
 — FR(5) The ability to swap a group of cities and a single city.
 — FR(6) The ability to swap single cities.
 
+Application Architectural Features
+To support the new functional requirements, a new application architecture must be 
+designed.  The new architecture must encapsulate the graphic display (canvas) in an
+Javascript or jQuery object.
+
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
 In the strict subordination ordering (SSO) application the only question that was asked
