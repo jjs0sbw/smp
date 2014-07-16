@@ -15,6 +15,9 @@ To support the new functional requirements, a new application architecture must 
 designed.  The new architecture must encapsulate the graphic display (canvas) in an
 Javascript or jQuery object.
 
+A structured interface between the ISM portion of the application and the pre-ISM 
+process steps must be developed.
+
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
 In the strict subordination ordering (SSO) application the only question that was asked
