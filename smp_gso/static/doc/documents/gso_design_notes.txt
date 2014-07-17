@@ -16,7 +16,8 @@ designed.  The new architecture must encapsulate the graphic display (canvas) in
 Javascript or jQuery object.
 
 A structured interface between the ISM portion of the application and the pre-ISM 
-process steps must be developed.
+process steps must be developed as well as an interface between the ISM and post-ISM 
+process steps.
 
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
