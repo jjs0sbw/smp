@@ -17,7 +17,11 @@ Javascript or jQuery object.
 
 A structured interface between the ISM portion of the application and the pre-ISM 
 process steps must be developed as well as an interface between the ISM and post-ISM 
-process steps.
+process steps. The overall application will have three primary sections:
+	Pre-ISM section
+	ISM section
+	Post-ISM section.
+
 
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
