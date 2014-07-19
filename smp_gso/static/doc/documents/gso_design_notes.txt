@@ -167,10 +167,16 @@ May use jQuery for the graphic object creation.
 Create functions to process the graphic object.
 Need a graphic processing object for each type of graphic transform.
 
-DESIGN NOTE THREE -07-11-14
+DESIGN NOTE THREE - 07-11-14
 Need to re-design the application structure.. 
 First make the graphic display into an object..
 Then create a set of transform functions to update the graphic object..
+
+DESIGN NOTE FOUR — 07-19-14
+Create a global application architecture with three sections:
+	Pre-ISM section
+	ISM section
+	Post-ISM section.
 
 
 
