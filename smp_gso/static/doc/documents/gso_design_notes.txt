@@ -22,6 +22,10 @@ process steps. The overall application will have three primary sections:
 	ISM section
 	Post-ISM section.
 
+The Pre-ISM section is a good candidate for individual Web2py application.  This web
+application would support NGT activities and provide a structured interface to a 
+ISM web application.
+
 
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
