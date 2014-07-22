@@ -25,7 +25,9 @@ process steps. The overall application will have three primary sections:
 The Pre-ISM section is a good candidate for individual Web2py application.  This web
 application would support NGT activities and provide a structured interface to a 
 ISM web application.  A set of “user stories” will be prepared to support the development
-of the application functional requirements.
+of the application functional requirements.  Each user story will be used to create
+a web page layout and set of test driven design functional tests.
+
 
 
 Functional Requirement One:
