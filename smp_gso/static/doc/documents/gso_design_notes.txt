@@ -28,6 +28,15 @@ ISM web application.  A set of “user stories” will be prepared to support th
 of the application functional requirements.  Each user story will be used to create
 a web page layout and set of test driven design functional tests.
 
+The main application should address three questions:
+	What data should the application store?
+	Which pages should be presented to the visitors?
+	How should the page content, for each page, be presented?
+
+The application database models address the answer to the first question.
+The application controllers address the answer to the second question.
+The application views address the answer to the third question.
+
 
 
 Functional Requirement One:
