@@ -195,7 +195,8 @@ Create a global application architecture with three sections:
 	Post-ISM section.
 
 
-
+DESIGN NOTE Five - 07-24-2014
+Need to review and reorganize the design document
 
 
 
