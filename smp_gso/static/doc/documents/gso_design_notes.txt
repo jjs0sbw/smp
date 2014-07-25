@@ -38,7 +38,6 @@ The application controllers address the answer to the second question.
 The application views address the answer to the third question.
 
 
-
 Functional Requirement One:
 The new FR(1) functional requirement indicates a need to gather additional information.
 In the strict subordination ordering (SSO) application the only question that was asked
@@ -197,6 +196,7 @@ Create a global application architecture with three sections:
 
 DESIGN NOTE Five - 07-24-2014
 Need to review and reorganize the design document
+Started a new github repo for web2py repo.
 
 
 
