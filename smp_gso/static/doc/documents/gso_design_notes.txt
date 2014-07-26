@@ -197,6 +197,7 @@ Create a global application architecture with three sections:
 DESIGN NOTE Five - 07-24-2014
 Need to review and reorganize the design document
 Started a new github repo for web2py repo.
+Transition to working the Web2py examples
 
 
 
