@@ -198,6 +198,7 @@ DESIGN NOTE Five - 07-24-2014
 Need to review and reorganize the design document
 Started a new github repo for web2py repo.
 Transition to working the Web2py examples
+Focus on creating a wiki-like application to support NGT
 
 
 
