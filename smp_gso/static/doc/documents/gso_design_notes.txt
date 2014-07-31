@@ -202,7 +202,8 @@ Focus on creating a wiki-like application to support NGT
 
 DESIGN NOTE SIX - 07-28-2014
 Work Web2py Minimalist Wiki example as foundation for NGT approach
-Completed NGT proof of concept foist cut web application
+Completed NGT proof of concept first cut web application
+Need to improve NGT workflow and application process
 
 
 
